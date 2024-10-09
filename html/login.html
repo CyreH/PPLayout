@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Login</title>
+</head>
+<body>
+
+<header class="header"></header>
+
+<section class="auth">
+    <h1 class="auth__head">Вход</h1>
+
+    <div class="auth__input input_white">
+        <input class="input_white-field" type="email" placeholder="Почта">
+    </div>
+
+    <div class="auth__input input_white">
+        <input class="input_white-field input_white-field_pass" type="password" placeholder="Пароль">
+        <div class="input_white-show input_white-eye input_white-eye_active">
+            <img src="../media/showPassIcon.svg" alt="show" draggable="false">
+        </div>
+        <div class="input_white-hide input_white-eye">
+            <img src="../media/hidePassIcon.svg" alt="hide" draggable="false">
+        </div>
+    </div>
+
+    <a href="" class="auth__link">Забыли пароль?</a>
+    
+    <button class="auth__btn btn_black">Войти</button>
+
+    <p class="auth__text">Нет аккаунта? <a href="signin.html">Зарегистрироваться</a></p>
+</section>
+
+
+<script>
+    let showBtns = document.querySelectorAll(".input_white-show");
+    let hideBtns = document.querySelectorAll(".input_white-hide");
+
+    let authPass = document.querySelectorAll(".input_white-field_pass");
+
+    for (let i = 0; i < hideBtns.length; i++) {
+        hideBtns[i].addEventListener('click', () => {
+            authPass[i].type = authPass[i].type === "password" ? "text": "password";
+            showBtns[i].classList.toggle("input_white-eye_active");
+            hideBtns[i].classList.toggle("input_white-eye_active");
+        })
+    }
+</script>
+</body>
+</html>
