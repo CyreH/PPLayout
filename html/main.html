@@ -6,8 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <title>Main Page</title>
 </head>
 <body>
@@ -122,10 +120,8 @@
     <section class="main__events">
         <h3 class="main__events-head">Мои мероприятия</h3>
 
-        <div class="splide main__events-content">
-            <div class="splide__track main__events-content-track">
-                <ul class="splide__list main__events-content-list">
-                    <li class="splide__slide main__events-content-slide">
+        <div class="main__events-content">
+            <div class="main__events-content-slide">
                         <a href="" class="main__events-content-slide-pic" draggable="false">
                             <img src="../media/testEvent.png" alt="event">
                             <p>Семинар</p>
@@ -149,195 +145,240 @@
                             <p>Екатеринбург</p>
                             <span class="main__events-content-slide-info-price">2100₽</span>
                         </div>
-                    </li>
-                    <li class="splide__slide main__events-content-slide">
-                        <a href="" class="main__events-content-slide-pic" draggable="false">
-                            <img src="../media/testEvent.png" alt="event">
-                            <p>Семинар</p>
-                        </a>
-                        <a href="" class="main__events-content-slide-head">Розыгрыш в честь 30-летия</a>
-                        <div class="main__events-content-slide-dates">
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Начало</span>
-                                <h4>12</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Конец</span>
-                                <h4>14</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                        </div>
-                        <div class="main__events-content-slide-info">
-                            <p>Екатеринбург</p>
-                            <span class="main__events-content-slide-info-price main__events-content-slide-info-price_free">Бесплатно</span>
-                        </div>
-                    </li>
-                    <li class="splide__slide main__events-content-slide">
-                        <a href="" class="main__events-content-slide-pic" draggable="false">
-                            <img src="../media/testEvent.png" alt="event">
-                            <p>Семинар</p>
-                        </a>
-                        <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
-                        <div class="main__events-content-slide-dates">
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Начало</span>
-                                <h4>12</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Конец</span>
-                                <h4>14</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                        </div>
-                        <div class="main__events-content-slide-info">
-                            <p>Екатеринбург</p>
-                            <span class="main__events-content-slide-info-price">2100₽</span>
-                        </div>
-                    </li>
-                    <li class="splide__slide main__events-content-slide">
-                        <a href="" class="main__events-content-slide-pic" draggable="false">
-                            <img src="../media/testEvent.png" alt="event">
-                            <p>Семинар</p>
-                        </a>
-                        <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
-                        <div class="main__events-content-slide-dates">
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Начало</span>
-                                <h4>12</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Конец</span>
-                                <h4>14</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                        </div>
-                        <div class="main__events-content-slide-info">
-                            <p>Екатеринбург</p>
-                            <span class="main__events-content-slide-info-price">2100₽</span>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
+            </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
+            </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
+            </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
             </div>
         </div>
+        </div>
     </section>
-
     <section class="main__events">
-        <h3 class="main__events-head">Мероприятия с моим участием</h3>
+        <h3 class="main__events-head">Мои мероприятия</h3>
 
-        <div class="splide main__events-content">
-            <div class="splide__track main__events-content-track">
-                <ul class="splide__list main__events-content-list">
-                    <li class="splide__slide main__events-content-slide">
-                        <a href="" class="main__events-content-slide-pic" draggable="false">
-                            <img src="../media/testEvent.png" alt="event">
-                            <p>Семинар</p>
-                        </a>
-                        <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
-                        <div class="main__events-content-slide-dates">
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Начало</span>
-                                <h4>12</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Конец</span>
-                                <h4>14</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                        </div>
-                        <div class="main__events-content-slide-info">
-                            <p>Екатеринбург</p>
-                            <span class="main__events-content-slide-info-price">2100₽</span>
-                        </div>
-                    </li>
-                    <li class="splide__slide main__events-content-slide">
-                        <a href="" class="main__events-content-slide-pic" draggable="false">
-                            <img src="../media/testEvent.png" alt="event">
-                            <p>Семинар</p>
-                        </a>
-                        <a href="" class="main__events-content-slide-head">Розыгрыш в честь 30-летия</a>
-                        <div class="main__events-content-slide-dates">
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Начало</span>
-                                <h4>12</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Конец</span>
-                                <h4>14</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                        </div>
-                        <div class="main__events-content-slide-info">
-                            <p>Екатеринбург</p>
-                            <span class="main__events-content-slide-info-price main__events-content-slide-info-price_free">Бесплатно</span>
-                        </div>
-                    </li>
-                    <li class="splide__slide main__events-content-slide">
-                        <a href="" class="main__events-content-slide-pic" draggable="false">
-                            <img src="../media/testEvent.png" alt="event">
-                            <p>Семинар</p>
-                        </a>
-                        <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
-                        <div class="main__events-content-slide-dates">
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Начало</span>
-                                <h4>12</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Конец</span>
-                                <h4>14</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                        </div>
-                        <div class="main__events-content-slide-info">
-                            <p>Екатеринбург</p>
-                            <span class="main__events-content-slide-info-price">2100₽</span>
-                        </div>
-                    </li>
-                    <li class="splide__slide main__events-content-slide">
-                        <a href="" class="main__events-content-slide-pic" draggable="false">
-                            <img src="../media/testEvent.png" alt="event">
-                            <p>Семинар</p>
-                        </a>
-                        <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
-                        <div class="main__events-content-slide-dates">
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Начало</span>
-                                <h4>12</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                            <div class="main__events-content-slide-dates-date">
-                                <span>Конец</span>
-                                <h4>14</h4>
-                                <p>марта</p>
-                                <p>18:00</p>
-                            </div>
-                        </div>
-                        <div class="main__events-content-slide-info">
-                            <p>Екатеринбург</p>
-                            <span class="main__events-content-slide-info-price">2100₽</span>
-                        </div>
-                    </li>
-                </ul>
+        <div class="main__events-content">
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
             </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
+            </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
+            </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
+            </div>
+            <div class="main__events-content-slide">
+                <a href="" class="main__events-content-slide-pic" draggable="false">
+                    <img src="../media/testEvent.png" alt="event">
+                    <p>Семинар</p>
+                </a>
+                <a href="" class="main__events-content-slide-head">Предварительная защита проектов</a>
+                <div class="main__events-content-slide-dates">
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Начало</span>
+                        <h4>12</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                    <div class="main__events-content-slide-dates-date">
+                        <span>Конец</span>
+                        <h4>14</h4>
+                        <p>марта</p>
+                        <p>18:00</p>
+                    </div>
+                </div>
+                <div class="main__events-content-slide-info">
+                    <p>Екатеринбург</p>
+                    <span class="main__events-content-slide-info-price">2100₽</span>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 </main>
@@ -384,24 +425,6 @@
         })
     })
     // end of dropdown
-
-    //splide
-    let elms = document.getElementsByClassName('splide');
-
-    for ( let i = 0; i < elms.length; i++ ) {
-        new Splide( elms[ i ] , {
-            arrows: false,
-            pagination: false,
-            mediaQuery: 'min',
-            breakpoints: {
-                768: {
-                    destroy: true
-                }
-            }
-        }).mount();
-    }
-
-    //end of splide
 </script>
 </body>
 </html>

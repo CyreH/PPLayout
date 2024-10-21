@@ -546,15 +546,9 @@ input[data-autocompleted] {
     }
 
     &-content{
-      &-track{
-        overflow: unset !important;
-      }
-      &-list{
-        display: grid !important;
-        grid-template-columns: repeat(4, 1fr);
-        gap: VW(40px);
-        height: VW(401px) !important;
-      }
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: VW(40px);
 
       &-slide{
         display: grid;
@@ -1153,18 +1147,25 @@ input[data-autocompleted] {
       }
 
       &-content{
-        margin-left: VWMob(-15px);
-        width: VWMob(320px);
-        &-track{
-          overflow: hidden !important;
-          padding-left: VWMob(15px) !important;
-          padding-right: VWMob(47px) !important;
-        }
-        &-list{
-          display: flex !important;
-          grid-template-columns: unset;
-          gap: 0;
-          height: 100% !important;
+        display: grid;
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: VWMob(273px);
+        gap: 0;
+
+        margin: 0 VWMob(-15px);
+        padding-right: VWMob(15px);
+
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: VWMob(15px);
+
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+
+        &::-webkit-scrollbar{
+          display: none;
         }
 
         &-slide{
@@ -1173,9 +1174,13 @@ input[data-autocompleted] {
           background-color: #FFFFFF;
           border-radius: VWMob(18.75px);
           height: 100%;
-          width: VWMob(258px) !important;
-          margin-right: VWMob(15px) !important;
-          //overflow: hidden;
+
+          margin-left: VWMob(15px);
+          scroll-snap-align: start;
+
+          &:last-child{
+            //margin-right: VWMob(45px);
+          }
 
           &-pic{
             position: relative;
@@ -1283,9 +1288,6 @@ input[data-autocompleted] {
       }
     }
   }
-
-
-
 
 
 
