@@ -673,14 +673,239 @@ input[data-autocompleted] {
 
   &__card{
     grid-column: span 2;
+
+    display: grid;
+    grid-template-columns: VW(577px) 1fr VW(320px);
+    column-gap: VW(40px);
+
+    padding: VW(40px);
+
+    background-color: #FFFFFF;
+    border-radius: VW(50px);
+
+    &-pic{
+      grid-row: span 4;
+      width: 100%;
+      border-radius: VW(25px);
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-tags{
+      display: flex;
+      gap: VW(30px);
+      align-items: center;
+
+      &-tag{
+        padding: VW(8px) VW(16px);
+        font-size: VW(14px);
+
+        border-radius: VW(8px);
+        box-shadow: 0 0 VW(40px) 0 #00000014;
+
+        &_closed{
+          color: #FF0000;
+          background-color: #FF00001A;
+        }
+      }
+    }
+
+    &-links{
+      justify-self: end;
+      display: flex;
+      gap: VW(15px);
+      align-items: center;
+
+      &-link{
+        font-size: VW(14px);
+        color: #ACB6BF;
+        text-decoration: underline;
+
+        transition: color ease-in-out 250ms;
+
+        &:hover{
+          color: #000000;
+        }
+      }
+
+    }
+
+    &-title{
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      height: VW(100px);
+      font-weight: 700;
+      font-size: VW(32px);
+    }
+
+    &-info{
+      grid-column: span 2;
+      display: grid;
+      gap: VW(15px);
+
+      &-item{
+        display: flex;
+        align-items: center;
+
+        &-pic{
+          width: VW(16px);
+          margin-right: VW(15px);
+
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &-text{
+          font-size: VW(16px);
+
+          span{
+            color: #FF0000;
+          }
+
+          &_prpl{
+            color: #B700FF;
+          }
+        }
+
+        &-ppl{
+          width: VW(14px);
+          height: VW(14px);
+
+          margin: 0 VW(10px) 0 VW(20px);
+
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &-amount{
+          font-size: VW(16px);
+          color: #ACB6BF;
+          text-decoration: underline;
+
+          transition: color ease-in-out 250ms;
+
+          &:hover{
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    &-btn{
+      grid-column: 3/4;
+    }
   }
 
-  &__info{
-    //grid-column: 1/2;
+  &__desc{
+    display: grid;
+    gap: VW(40px);
+    height: fit-content;
+
+    &-head{
+      font-weight: 700;
+      font-size: VW(28px);
+    }
+
+    &-text{
+      font-size: VW(20px);
+    }
+
+    &-download{
+      display: grid;
+      grid-template-columns: VW(30px) max-content 1fr;
+      gap: VW(6px) VW(15px);
+
+      width: fit-content;
+
+      margin-bottom: VW(10px);
+      padding: VW(15px);
+      background-color: #FFFFFF;
+      border-radius: VW(16px);
+
+      &-pic{
+        grid-row: span 2;
+        width: 100%;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p{
+        grid-column: span 2;
+        font-size: VW(16px);
+      }
+
+      span{
+        font-size: VW(16px);
+        color: #ACB6BF;
+      }
+    }
   }
 
   &__host{
-    //grid-column: 2/3;
+    display: grid;
+
+    &-head{
+      font-size: VW(28px);
+      font-weight: 700;
+    }
+
+    &-pic{
+      width: 100%;
+      height: VW(250px);
+
+      border-radius: VW(26px);
+      overflow: hidden;
+
+      margin: VW(40px) 0 VW(30px);
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-subhead{
+      font-size: VW(16px);
+      color: #ACB6BF;
+
+      margin-bottom: VW(10px);
+    }
+
+    &-text{
+      font-size: VW(16px);
+
+      margin-bottom: VW(15px);
+    }
+
+    &-contact{
+      display: flex;
+      gap: VW(10px);
+      align-items: center;
+
+      img{
+        width: VW(27px);
+      }
+
+      p{
+        font-size: VW(16px);
+      }
+    }
   }
 }
 
