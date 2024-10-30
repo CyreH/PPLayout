@@ -496,6 +496,15 @@ input[data-autocompleted] {
   background-color: rgba(75, 181, 67, 0.1019607843);
 }
 
+.event {
+  padding: 5.7894736842vw 10.5263157895vw;
+  display: grid;
+  grid-template-columns: 1fr 13.1578947368vw;
+  gap: 2.6315789474vw 5.8947368421vw;
+}
+.event__card {
+  grid-column: span 2;
+}
 .hide-on-desktop {
   display: none;
 }

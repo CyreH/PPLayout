@@ -665,6 +665,26 @@ input[data-autocompleted] {
   }
 }
 
+.event{
+  padding: VW(110px) VW(200px);
+  display: grid;
+  grid-template-columns: 1fr VW(250px);
+  gap: VW(50px) VW(112px);
+
+  &__card{
+    grid-column: span 2;
+  }
+
+  &__info{
+    //grid-column: 1/2;
+  }
+
+  &__host{
+    //grid-column: 2/3;
+  }
+}
+
+
 
 
 
