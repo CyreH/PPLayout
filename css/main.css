@@ -679,12 +679,20 @@ input[data-autocompleted] {
   display: flex;
   gap: 0.5263157895vw;
   align-items: center;
+  cursor: pointer;
+}
+.event__host-contact:not(:last-child) {
+  margin-bottom: 0.5263157895vw;
 }
 .event__host-contact img {
   width: 1.4210526316vw;
 }
+.event__host-contact:hover p {
+  text-decoration: underline;
+}
 .event__host-contact p {
   font-size: 0.8421052632vw;
+  transition: text-decoration ease-in-out 250ms;
 }
 
 .hide-on-desktop {

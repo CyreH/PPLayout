@@ -898,12 +898,26 @@ input[data-autocompleted] {
       gap: VW(10px);
       align-items: center;
 
+      cursor: pointer;
+
+      &:not(:last-child){
+        margin-bottom: VW(10px);
+      }
+
       img{
         width: VW(27px);
       }
 
+      &:hover{
+        p{
+            text-decoration: underline;
+        }
+      }
+
       p{
         font-size: VW(16px);
+
+        transition: text-decoration ease-in-out 250ms;
       }
     }
   }

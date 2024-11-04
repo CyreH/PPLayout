@@ -140,19 +140,19 @@
         <p class="event__host-text">Сергеев Сергей Савельевич</p>
 
         <span class="event__host-subhead">Контакты:</span>
-        <a href="tel:123" class="event__host-contact">
+        <div onclick="copyText(`+79022721339`)" class="event__host-contact">
             <img src="../media/event/whatsappIcon.svg" alt="whatsapp">
             <p>+79022721339</p>
-        </a>
-        <a href="" class="event__host-contact">
+        </div>
+        <div onclick="copyText(`@ruslikut`)" class="event__host-contact">
             <img src="../media/event/vkIcon.svg" alt="vk">
             <p>@ruslikut</p>
-        </a>
-        <a href="" class="event__host-contact">
+        </div>
+        <a onclick="copyText(`@matelr`)" class="event__host-contact">
             <img src="../media/event/tgIcon.svg" alt="tg">
             <p>@matelr</p>
         </a>
-        <a href="mailto:art@mail.ru" class="event__host-contact">
+        <a onclick="copyText(`test@mail.ru`)" class="event__host-contact">
             <img src="../media/event/mailIcon.svg" alt="mail">
             <p>utenkov2003@mail.ru</p>
         </a>
@@ -201,6 +201,14 @@
         })
     })
     // end of dropdown
+
+    //copyText
+    function copyText(text) {
+        navigator.clipboard.writeText(text);
+        alert("Скопировано");
+    }
+
+    //end of copyText
 </script>
 </body>
 </html>
