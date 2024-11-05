@@ -1036,6 +1036,13 @@ input[data-autocompleted] {
     &-btn{
       width: VW(320px);
     }
+
+    transition: opacity ease-in-out 250ms;
+
+    &_hide{
+      pointer-events: none;
+      opacity: 0;
+    }
   }
 }
 

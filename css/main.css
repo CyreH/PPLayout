@@ -779,9 +779,14 @@ input[data-autocompleted] {
   width: 78.2105263158vw;
   border-radius: 0.7894736842vw;
   background-color: #FFFFFF;
+  transition: opacity ease-in-out 250ms;
 }
 .profile__save-btn {
   width: 16.8421052632vw;
+}
+.profile__save_hide {
+  pointer-events: none;
+  opacity: 0;
 }
 
 .hide-on-desktop {
