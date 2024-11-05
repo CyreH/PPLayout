@@ -134,7 +134,7 @@ input[data-autocompleted] {
 .input_white{
   position: relative;
   width: 100%;
-  height: VW(50px);
+  height: VW(60px);
 
   background-color: #FFFFFF;
   border-radius: VW(15px);
@@ -145,6 +145,7 @@ input[data-autocompleted] {
     top: 50%;
     transform: translateY(-50%);
     width: 75%;
+    height: 100%;
 
     background: none;
     border: none;
@@ -152,6 +153,10 @@ input[data-autocompleted] {
 
     &::placeholder{
       color: #6F7071;
+    }
+
+    &_date{
+      left: VW(53px)
     }
   }
 
@@ -197,6 +202,16 @@ input[data-autocompleted] {
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  &-calendar{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: VW(20px);
+
+    width: VW(18px);
+    height: VW(18px);
   }
 }
 
@@ -534,6 +549,10 @@ input[data-autocompleted] {
     gap: VW(40px);
 
     height: VW(50px);
+
+    &-input{
+      height: VW(50px);
+    }
   }
 
   &__events{
@@ -919,6 +938,103 @@ input[data-autocompleted] {
 
         transition: text-decoration ease-in-out 250ms;
       }
+    }
+  }
+}
+
+.profile{
+  position: relative;
+  display: grid;
+  gap: VW(40px);
+
+  padding: VW(110px) VW(200px) VW(300px);
+
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1{
+      font-weight: 700;
+      font-size: VW(28px);
+    }
+
+    button{
+      font-weight: 700;
+      font-size: VW(28px);
+
+      color: #FF0000;
+      background: none;
+
+      outline: none;
+      border: none;
+
+      cursor: pointer;
+    }
+  }
+
+  &__info{
+    display: grid;
+    grid-template-columns: VW(488px) VW(388px) 1fr VW(161px);
+    gap: VW(30px) VW(40px);
+
+    height: VW(478px);
+
+    margin-bottom: VW(10px);
+
+    &-pic{
+      grid-row: span 4;
+      width: 100%;
+      height: 100%;
+
+      padding-right: VW(10px);
+
+      border-radius: VW(26px);
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-block{
+      display: grid;
+      gap: VW(15px);
+
+      &_span2{
+        grid-column: span 2;
+      }
+
+      &_span3{
+        grid-column: span 3;
+      }
+    }
+
+    &_contact{
+      grid-template-columns: 1fr 1fr;
+      height: min-content;
+    }
+  }
+
+  &__save{
+    position: fixed;
+    left: VW(200px);
+    bottom: VW(50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: VW(10px);
+
+    width: VW(1486px);
+
+    border-radius: VW(15px);
+    background-color: #FFFFFF;
+
+    &-btn{
+      width: VW(320px);
     }
   }
 }
