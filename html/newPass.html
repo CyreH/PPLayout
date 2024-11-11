@@ -6,21 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Signin</title>
+    <title>Change Password</title>
 </head>
 <body>
 
 <header class="header"></header>
 
 <form class="auth">
-    <h1 class="auth__head">Регистрация</h1>
-
-    <div class="auth__input input_white">
-        <input class="input_white-field" type="email" placeholder="Почта">
-    </div>
+    <h1 class="auth__head">Смена пароля</h1>
 
     <div class="auth__input input_white input_pass">
-        <input class="input_white-field input_white-field_pass" type="password" placeholder="Пароль">
+        <input class="input_white-field input_white-field_pass" type="password" placeholder="Старый пароль" required>
         <div class="input_white-show input_white-eye input_white-eye_active">
             <img src="../media/showPassIcon.svg" alt="show" draggable="false">
         </div>
@@ -29,7 +25,7 @@
         </div>
     </div>
     <div class="auth__input input_white input_pass">
-        <input class="input_white-field input_white-field_pass" type="password" placeholder="Повторите пароль">
+        <input class="input_white-field input_white-field_pass" type="password" placeholder="Новый пароль" required>
         <div class="input_white-show input_white-eye input_white-eye_active">
             <img src="../media/showPassIcon.svg" alt="show" draggable="false">
         </div>
@@ -37,10 +33,17 @@
             <img src="../media/hidePassIcon.svg" alt="hide" draggable="false">
         </div>
     </div>
-    
-    <div class="auth__btn btn_black">Зарегистрироваться</div>
+    <div class="auth__input input_white input_pass">
+        <input class="input_white-field input_white-field_pass" type="password" placeholder="Повторите пароль" required>
+        <div class="input_white-show input_white-eye input_white-eye_active">
+            <img src="../media/showPassIcon.svg" alt="show" draggable="false">
+        </div>
+        <div class="input_white-hide input_white-eye">
+            <img src="../media/hidePassIcon.svg" alt="hide" draggable="false">
+        </div>
+    </div>
 
-    <p class="auth__text">Есть аккаунт? <a href="login.html">Войти</a></p>
+    <button type="submit" class="auth__btn btn_black">Изменить пароль</button>
 </form>
 
 

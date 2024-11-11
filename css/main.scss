@@ -57,7 +57,7 @@ button {
   padding: 0;
 }
 
-a, p, h1, h2, h3, h4, h5, h6, button, input, label, span, div {
+a, p, h1, h2, h3, h4, h5, h6, button, input, label, span, div, textarea {
   overflow-wrap: break-word;
 
   font-family: Montserrat, sans-serif;
@@ -215,6 +215,30 @@ input[data-autocompleted] {
   }
 }
 
+.textarea{
+  position: relative;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  min-height: VW(60px);
+  height: VW(60px);
+
+  background-color: #FFFFFF;
+  border-radius: VW(15px);
+  border: none;
+  outline: none;
+
+  line-height: VW(21.94px);
+  padding: VW(19px) VW(30px);
+
+  //&::placeholder{
+  //  position: absolute;
+  //  top: 50%;
+  //  transform: translateY(-50%);
+  //  left: VW(30px);
+  //}
+}
+
 .dropdown {
   width: 100%;
   position: relative;
@@ -363,6 +387,33 @@ input[data-autocompleted] {
         background: #B700FF1A;
       }
     }
+  }
+}
+
+.save{
+  position: fixed;
+  left: VW(200px);
+  bottom: VW(50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: VW(10px);
+
+  width: VW(1486px);
+
+  border-radius: VW(15px);
+  background-color: #FFFFFF;
+
+  &__btn{
+    width: VW(320px);
+  }
+
+  transition: opacity ease-in-out 250ms;
+
+  &_hide{
+    pointer-events: none;
+    opacity: 0;
   }
 }
 
@@ -987,6 +1038,8 @@ input[data-autocompleted] {
       width: 100%;
       height: 100%;
 
+      position: relative;
+
       padding-right: VW(10px);
 
       border-radius: VW(26px);
@@ -996,6 +1049,31 @@ input[data-autocompleted] {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+
+      &-change{
+        position: absolute;
+        top: VW(30px);
+        right: VW(30px);
+
+        width: VW(50px);
+        height: VW(50px);
+
+        border-radius: VW(15px);
+        overflow: hidden;
+
+        border: none;
+        outline: none;
+        background: none;
+
+        cursor: pointer;
+        user-select: none;
+
+        transition: transform ease-in-out 250ms;
+
+        &:hover{
+          transform: scale(1.1);
+        }
       }
     }
 
@@ -1017,31 +1095,134 @@ input[data-autocompleted] {
       height: min-content;
     }
   }
+}
 
-  &__save{
-    position: fixed;
-    left: VW(200px);
-    bottom: VW(50px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.create{
+  display: grid;
+  gap: VW(50px);
+  padding: VW(110px) VW(200px);
 
-    padding: VW(10px);
+  &-item {
+    display: grid;
 
-    width: VW(1486px);
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: VW(20px);
 
-    border-radius: VW(15px);
-    background-color: #FFFFFF;
+      width: VW(747px);
 
-    &-btn{
-      width: VW(320px);
+      cursor: pointer;
+      user-select: none;
+
+      h1 {
+        font-weight: 700;
+        font-size: VW(28px);
+
+        span{
+          font-weight: 700;
+          font-size: VW(28px);
+          color: #B700FF;
+        }
+      }
+
+      &-pic {
+        width: VW(26px);
+        height: VW(14px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        user-select: none;
+
+        transition: transform ease-in-out 250ms;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &_active &-pic {
+        transform: rotate(180deg);
+      }
     }
 
-    transition: opacity ease-in-out 250ms;
+    &-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 400ms, margin 400ms;
 
-    &_hide{
-      pointer-events: none;
-      opacity: 0;
+      &-wrap {
+        overflow: hidden;
+      }
+
+      &-text{
+        margin-top: VW(30px);
+        font-weight: 600;
+        font-size: VW(18px);
+      }
+
+      &-input{
+        margin-top: VW(30px);
+        width: VW(730px);
+      }
+
+      &-file{
+        height: VW(60px);
+
+        margin-top: VW(30px);
+
+        display: grid;
+        grid-template-columns: VW(320px) 1fr;
+        gap: VW(6px) VW(30px);
+
+        &-upload{
+          height: 100%;
+          width: 100%;
+
+          grid-row: span 2;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border-radius: VW(15px);
+
+          background: #E8E8E8;
+          outline: none;
+          border: none;
+
+          cursor: pointer;
+          user-select: none;
+        }
+
+        p{
+          align-self: end;
+          span{
+            color: #ACB6BF;
+          }
+        }
+
+        &-delete{
+          align-self: start;
+          color: #FF0000;
+          text-decoration: underline;
+          width: fit-content;
+          cursor: pointer;
+
+          background: none;
+          outline: none;
+          border: none;
+        }
+      }
+
+      &_active {
+        grid-template-rows: 1fr;
+      }
+
     }
   }
 }
