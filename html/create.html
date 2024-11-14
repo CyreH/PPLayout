@@ -42,59 +42,270 @@
 
 <form class="create">
 
-    <div class="create-item">
-        <div class="create-item-head create-item-head_active">
+    <div class="create__item">
+        <div class="create__item-head create__item-head_active">
             <h1>Название мероприятия<span>*</span></h1>
-            <div class="create-item-head-pic">
+            <div class="create__item-head-pic">
                 <img src="../media/caret.svg" alt="caret">
             </div>
         </div>
-        <div class="create-item-content create-item-content_active">
-            <div class="create-item-content-wrap">
-                <p class="create-item-content-text">Назовите ваше событие ярко и кратко, чтобы заинтересовать пользователей<br/>Максимум 120 символов</p>
-                <textarea class="create-item-content-input textarea" oninput="auto_grow(this)" placeholder="Введите название"></textarea>
+        <div class="create__item-content create__item-content_active">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Назовите ваше событие ярко и кратко, чтобы заинтересовать
+                    пользователей<br/>Максимум 120 символов</p>
+                <textarea class="create__item-content-input textarea" oninput="auto_grow(this)"
+                          placeholder="Введите название"></textarea>
             </div>
         </div>
     </div>
-    <div class="create-item">
-        <div class="create-item-head">
+    <div class="create__item">
+        <div class="create__item-head">
             <h1>Баннер</h1>
-            <div class="create-item-head-pic">
+            <div class="create__item-head-pic">
                 <img src="../media/caret.svg" alt="caret">
             </div>
         </div>
-        <div class="create-item-content">
-            <div class="create-item-content-wrap">
-                <p class="create-item-content-text">Для привлечения внимания пользователей предлагаем загрузить баннер мероприятия<br/>Формат: .jpg, .png и .bmp, размер от 400 пикселей в ширину и высоту, вес до 2 MB</p>
-                <div class="create-item-content-file">
-                    <button class="create-item-content-file-upload">Выбрать файл</button>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Для привлечения внимания пользователей предлагаем загрузить баннер
+                    мероприятия<br/>Формат: .jpg, .png и .bmp, размер от 400 пикселей в ширину и высоту, вес до 2 MB</p>
+                <div class="create__item-content-file">
+                    <button class="create__item-content-file-upload">Выбрать файл</button>
                     <p>megatz.docs <span>3.2 Мб</span></p>
-                    <button class="create-item-content-file-delete">Удалить</button>
+                    <button class="create__item-content-file-delete">Удалить</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="create-item">
-        <div class="create-item-head">
-            <h1>Баннер</h1>
-            <div class="create-item-head-pic">
+    <div class="create__item">
+        <div class="create__item-head">
+            <h1>Описание</h1>
+            <div class="create__item-head-pic">
                 <img src="../media/caret.svg" alt="caret">
             </div>
         </div>
-        <div class="create-item-content">
-            <div class="create-item-content-wrap">
-                <p class="create-item-content-text">Расскажите подробнее о мероприятии<br/>Рекомендуем 3-4 предложения, чтобы познакомить пользователей с предстоящим событием</p>
-                <textarea class="create-item-content-input textarea" oninput="auto_grow(this)" placeholder="Введите описание"></textarea>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Расскажите подробнее о мероприятии<br/>Рекомендуем 3-4 предложения,
+                    чтобы познакомить пользователей с предстоящим событием</p>
+                <textarea class="create__item-content-input textarea" oninput="auto_grow(this)"
+                          placeholder="Введите описание"></textarea>
 
-                <p class="create-item-content-text">Загрузите программу мероприятия</p>
-                <div class="create-item-content-file">
-                    <button class="create-item-content-file-upload">Выбрать файл</button>
+                <p class="create__item-content-text">Загрузите программу мероприятия</p>
+                <div class="create__item-content-file">
+                    <button class="create__item-content-file-upload">Выбрать файл</button>
                     <p>megatz.docs <span>3.2 Мб</span></p>
-                    <button class="create-item-content-file-delete">Удалить</button>
+                    <button class="create__item-content-file-delete">Удалить</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="create__item">
+        <div class="create__item-head">
+            <h1>Адрес<span>*</span></h1>
+            <div class="create__item-head-pic">
+                <img src="../media/caret.svg" alt="caret">
+            </div>
+        </div>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Расскажите где будет проходить ваше мероприятие<br/>Рекомендуем
+                    указывать адрес подробно, чтобы участники смогу вас найти</p>
+                <div class="create__item-content-radios">
+                    <input type="radio" class="visually-hidden" id="createAddressOnline" name="createAddress"
+                           value="online" required>
+                    <label for="createAddressOnline" class="create__item-content-radios-btn">
+                        <span></span>
+                        Онлайн
+                    </label>
+                    <input type="radio" class="visually-hidden" id="createAddressOffline" name="createAddress"
+                           value="offline" required>
+                    <label for="createAddressOffline" class="create__item-content-radios-btn">
+                        <span></span>
+                        Очно
+                    </label>
+                </div>
+                <div id="createAddressOfflineInfo" class="create__item-content-hidden">
+                    <div class="create__item-content-wrap">
+                        <div class="create__item-content-inputs">
+                            <div class="input_white">
+                                <input class="input_white-field" type="text" placeholder="Введите город">
+                            </div>
+                            <div class="input_white">
+                                <input class="input_white-field" type="text" placeholder="Введите улицу, дом">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="create__item">
+        <div class="create__item-head">
+            <h1>Формат<span>*</span></h1>
+            <div class="create__item-head-pic">
+                <img src="../media/caret.svg" alt="caret">
+            </div>
+        </div>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Укажите один из форматов вашего мероприятия</p>
+                <div class="create__item-content-dropdown dropdown">
+                    <div class="create__item-content-dropdown-select dropdown-select">
+                        <div class="dropdown-select-selected"><span>Выберите формат</span></div>
+                        <div class="dropdown-select-caret">
+                            <img src="../media/caret.svg" alt="caret">
+                        </div>
+                    </div>
+                    <div class=" create__item-content-dropdown-menu dropdown-menu">
+                        <div class="dropdown-menu-wrapper">
+                            <div class="dropdown-menu-item">
+                                <p class="dropdown-menu-item-text">Онлайн</p>
+                            </div>
+                            <div class="dropdown-menu-item">
+                                <p class="dropdown-menu-item-text">Екатеринбург</p>
+                            </div>
+                            <div class="dropdown-menu-item">
+                                <p class="dropdown-menu-item-text">Москва</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="create__item">
+        <div class="create__item-head">
+            <h1>Дата и время<span>*</span></h1>
+            <div class="create__item-head-pic">
+                <img src="../media/caret.svg" alt="caret">
+            </div>
+        </div>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Укажите даты и время начала и окончания вашего мероприятия<br/>Если
+                    оно состоит из нескольких частей, то можно указать несколько временных отрезков</p>
+                <div id="createDates" class="create__item-content-dates">
+                    <div id="createAdd" class="create__item-content-dates-date input_white">
+                        <input class="input_white-field input_white-field_date" type="text" placeholder="01.01.2024">
+                        <img src="../media/calendar.svg" alt="" class="input_white-calendar">
+                    </div>
+                    <span class="decoy"></span>
+                    <button id="createDelete" onclick="deleteLastItem(document.getElementById('createDates'))"
+                            class="create__item-content-dates-remove visually-hidden">Удалить
+                    </button>
+
+                </div>
+                <button onclick="duplicateItem(document.getElementById('createAdd')); duplicateItem(document.getElementById('createDelete'));"
+                        class="create__item-content-add">
+                    Добавить дату и время
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="create__item">
+        <div class="create__item-head">
+            <h1>Стоимость входа<span>*</span></h1>
+            <div class="create__item-head-pic">
+                <img src="../media/caret.svg" alt="caret">
+            </div>
+        </div>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Если у вас платное мероприятие, то укажите стоимость входа для
+                    посетителей</p>
+                <div class="create__item-content-radios">
+                    <input type="radio" class="visually-hidden" id="createJoinFree" name="createJoin"
+                           value="free" required>
+                    <label for="createJoinFree" class="create__item-content-radios-btn">
+                        <span></span>
+                        Бесплатно
+                    </label>
+                    <input type="radio" class="visually-hidden" id="createJoinPay" name="createJoin"
+                           value="pay" required>
+                    <label for="createJoinPay" class="create__item-content-radios-btn">
+                        <span></span>
+                        Платно
+                    </label>
+                </div>
+                <div id="createJoinPayInfo" class="create__item-content-hidden">
+                    <div class="create__item-content-wrap">
+                        <div class="create__item-content-input_short input_white">
+                            <input class="input_white-field" type="text" placeholder="Введите стоимость">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="create__item">
+        <div class="create__item-head">
+            <h1>Доступ к мероприятию<span>*</span></h1>
+            <div class="create__item-head-pic">
+                <img src="../media/caret.svg" alt="caret">
+            </div>
+        </div>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Выберите уровень доступа к мероприятию<br/>Если вы хотите его
+                    организовать только для определённого круга лиц, то укажите “Закрытое мероприятие”.<br/>В ином
+                    случае - “Открыто для всех”</p>
+                <div class="create__item-content-radios">
+                    <input type="radio" class="visually-hidden" id="createAccessOpen" name="createAccess"
+                           value="open" required>
+                    <label for="createAccessOpen" class="create__item-content-radios-btn">
+                        <span></span>
+                        Открыто для всех
+                    </label>
+                    <input type="radio" class="visually-hidden" id="createAccessClosed" name="createAccess"
+                           value="closed" required>
+                    <label for="createAccessClosed" class="create__item-content-radios-btn">
+                        <span></span>
+                        Закрытое мероприятие
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="create__item">
+        <div class="create__item-head">
+            <h1>Количество участников<span>*</span></h1>
+            <div class="create__item-head-pic">
+                <img src="../media/caret.svg" alt="caret">
+            </div>
+        </div>
+        <div class="create__item-content">
+            <div class="create__item-content-wrap">
+                <p class="create__item-content-text">Если вы не можете вместить большее количество людей, чем подразумевает площадка,
+                    <br/>то поставьте ограничение на участников</p>
+                <div class="create__item-content-radios">
+                    <input type="radio" class="visually-hidden" id="createMembersUnlimited" name="createMembers"
+                           value="unlimited" required>
+                    <label for="createMembersUnlimited" class="create__item-content-radios-btn">
+                        <span></span>
+                        Неограниченно
+                    </label>
+                    <input type="radio" class="visually-hidden" id="createMembersLimited" name="createMembers"
+                           value=limited" required>
+                    <label for="createMembersLimited" class="create__item-content-radios-btn">
+                        <span></span>
+                        Ограниченно
+                    </label>
+                </div>
+                <div id="createMembersLimitedAmount" class="create__item-content-hidden">
+                    <div class="create__item-content-wrap">
+                        <div class="create__item-content-inputs">
+                            <div class="input_white">
+                                <input class="input_white-field" type="text" placeholder="Введите количество">
+                            </div>
+                            <p>19.10.23 18:00 – 19.10.23 18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="save save_hide">
         <p>Проверьте, что все обязательные поля заполнены</p>
@@ -103,36 +314,137 @@
 </form>
 
 <script>
+    // функция для роста textarea в зависимости от контента
     function auto_grow(element) {
         element.style.height = "5px";
         element.style.height = (element.scrollHeight) + "px";
     }
+
+    // функция дублирования объекта
+    function duplicateItem(element) {
+
+
+        let parent = element.parentElement;
+        let clone = element.cloneNode(element);
+
+        clone.classList.remove("visually-hidden");
+        // element.after(clone);
+        parent.appendChild(clone);
+
+
+    }
+
+    // функция удаление объекта
+    function deleteLastItem(parent) {
+        parent.lastChild.remove()
+        parent.lastChild.remove()
+    }
+
+    // hidden radio info
+    const createOffline = document.getElementById('createAddressOffline');
+    const createOnline = document.getElementById('createAddressOnline');
+    const createOfflineInfo = document.getElementById('createAddressOfflineInfo');
+
+    const createFree = document.getElementById('createJoinFree');
+    const createPay = document.getElementById('createJoinPay');
+    const createPayInfo = document.getElementById('createJoinPayInfo');
+
+    const createUnlimited = document.getElementById('createMembersUnlimited');
+    const createLimited = document.getElementById('createMembersLimited');
+    const createLimitedInfo = document.getElementById('createMembersLimitedAmount');
+
+    createOffline.addEventListener("change", () => {
+        createOfflineInfo.classList.remove("create__item-content-hidden_show");
+    })
+    createOnline.addEventListener("change", () => {
+        createOfflineInfo.classList.add("create__item-content-hidden_show");
+    })
+
+    createFree.addEventListener("change", () => {
+        createPayInfo.classList.remove("create__item-content-hidden_show");
+    })
+    createPay.addEventListener("change", () => {
+        createPayInfo.classList.add("create__item-content-hidden_show");
+    })
+
+    createUnlimited.addEventListener("change", () => {
+        createLimitedInfo.classList.remove("create__item-content-hidden_show");
+    })
+    createLimited.addEventListener("change", () => {
+        createLimitedInfo.classList.add("create__item-content-hidden_show");
+    })
+    // end
+
+
     // accordion
-    const accordionHeads = document.querySelectorAll('.create-item-head');
+    const accordionHeads = document.querySelectorAll('.create__item-head');
 
     accordionHeads.forEach(accordionItemHeader => {
         accordionItemHeader.addEventListener("click", event => {
 
             // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
 
-            const currentlyActiveAccordionItemHeader = document.querySelector(".create-item-head.create-item-head_active");
+            const currentlyActiveAccordionItemHeader = document.querySelector(".create__item-head.create__item-head_active");
             if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
-                currentlyActiveAccordionItemHeader.classList.toggle("create-item-head_active");
-                currentlyActiveAccordionItemHeader.nextElementSibling.classList.remove("create-item-content_active");
+                currentlyActiveAccordionItemHeader.classList.toggle("create__item-head_active");
+                currentlyActiveAccordionItemHeader.nextElementSibling.classList.remove("create__item-content_active");
             }
 
-            accordionItemHeader.classList.toggle("create-item-head_active");
+            accordionItemHeader.classList.toggle("create__item-head_active");
             const accordionItemBody = accordionItemHeader.nextElementSibling;
 
-            if (accordionItemHeader.classList.contains("create-item-head_active")) {
-                accordionItemBody.classList.add("create-item-content_active");
+            if (accordionItemHeader.classList.contains("create__item-head_active")) {
+                accordionItemBody.classList.add("create__item-content_active");
             } else {
-                accordionItemBody.classList.remove("create-item-content_active");
+                accordionItemBody.classList.remove("create__item-content_active");
             }
 
         });
     });
     // end of accordion
+
+
+    // dropdown
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const select = dropdown.querySelector('.dropdown-select');
+        const caret = dropdown.querySelector('.dropdown-select-caret');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const options = dropdown.querySelectorAll('.dropdown-menu-item');
+        const selected = dropdown.querySelector('.dropdown-select-selected');
+
+        select.addEventListener('click', () => {
+            select.classList.toggle('dropdown-select_active');
+            caret.classList.toggle('dropdown-select-caret_rotate');
+            menu.classList.toggle('dropdown-menu_open');
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                const optionText = option.querySelector('.dropdown-menu-item-text');
+                selected.textContent = optionText.textContent;
+                select.classList.remove('dropdown-select_active');
+                caret.classList.remove('dropdown-select-caret_rotate');
+                menu.classList.remove('dropdown-menu_open');
+            })
+        });
+
+        window.addEventListener('click', e => {
+            const size = dropdown.getBoundingClientRect();
+            if (
+                e.clientX < size.left ||
+                e.clientX > size.right ||
+                e.clientY < size.top ||
+                e.clientY > size.bottom
+            ) {
+                select.classList.remove('dropdown-select_active');
+                caret.classList.remove('dropdown-select-caret_rotate');
+                menu.classList.remove('dropdown-menu_open');
+            }
+        })
+    })
+    // end of dropdown
 </script>
 </body>
 </html>

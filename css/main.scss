@@ -82,6 +82,14 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, span, div, textarea {
   display: none !important;
 }
 
+.decoy{
+  display: block;
+  content: "";
+  opacity: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
@@ -131,7 +139,7 @@ input[data-autocompleted] {
   }
 }
 
-.input_white{
+.input_white {
   position: relative;
   width: 100%;
   height: VW(60px);
@@ -139,7 +147,7 @@ input[data-autocompleted] {
   background-color: #FFFFFF;
   border-radius: VW(15px);
 
-  &-field{
+  &-field {
     position: absolute;
     left: VW(30px);
     top: 50%;
@@ -151,16 +159,16 @@ input[data-autocompleted] {
     border: none;
     outline: none;
 
-    &::placeholder{
+    &::placeholder {
       color: #6F7071;
     }
 
-    &_date{
+    &_date {
       left: VW(53px)
     }
   }
 
-  &-eye{
+  &-eye {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -175,17 +183,17 @@ input[data-autocompleted] {
     transition: opacity ease-in-out 250ms;
     opacity: 0;
 
-    &_active{
+    &_active {
       opacity: 1;
     }
 
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
   }
 
-  &-search{
+  &-search {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -197,14 +205,14 @@ input[data-autocompleted] {
 
     cursor: pointer;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  &-calendar{
+  &-calendar {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -215,7 +223,7 @@ input[data-autocompleted] {
   }
 }
 
-.textarea{
+.textarea {
   position: relative;
   width: 100%;
   resize: none;
@@ -332,7 +340,7 @@ input[data-autocompleted] {
     //padding: VW(20px) 0;
 
     transition: linear 250ms;
-    z-index: 2;
+    z-index: 100;
 
     //max-height: VW(300px);
     overflow: hidden;
@@ -374,7 +382,7 @@ input[data-autocompleted] {
 
       cursor: pointer;
 
-      &-text{
+      &-text {
         font-size: VW(16px);
       }
 
@@ -390,7 +398,7 @@ input[data-autocompleted] {
   }
 }
 
-.save{
+.save {
   position: fixed;
   left: VW(200px);
   bottom: VW(50px);
@@ -405,19 +413,19 @@ input[data-autocompleted] {
   border-radius: VW(15px);
   background-color: #FFFFFF;
 
-  &__btn{
+  &__btn {
     width: VW(320px);
   }
 
   transition: opacity ease-in-out 250ms;
 
-  &_hide{
+  &_hide {
     pointer-events: none;
     opacity: 0;
   }
 }
 
-.header{
+.header {
   position: fixed;
   top: 0;
   z-index: 10;
@@ -433,37 +441,37 @@ input[data-autocompleted] {
 
   background-color: #FFFFFF;
 
-  &__logo{
+  &__logo {
     width: VW(113px);
     height: VW(29px);
 
     margin-right: VW(390px);
 
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
   }
 
-  &__link{
+  &__link {
     font-size: VW(18px);
 
     transition: color ease-in-out 250ms;
 
-    &:hover{
+    &:hover {
       color: #B700FF;
     }
 
-    &_active{
+    &_active {
       color: #B700FF;
     }
 
-    &_mid{
+    &_mid {
       margin: 0 VW(22px);
     }
   }
 
-  &__btn{
+  &__btn {
     margin-left: auto;
     padding: VW(5px) VW(16px) VW(7px);
 
@@ -475,13 +483,13 @@ input[data-autocompleted] {
 
     transition: color ease-in-out 250ms, background-color ease-in-out 250ms;
 
-    &:hover{
+    &:hover {
       color: #FFFFFF;
       background-color: #B700FF;
     }
   }
 
-  &__notify{
+  &__notify {
     position: relative;
 
     width: VW(18px);
@@ -493,19 +501,19 @@ input[data-autocompleted] {
 
     cursor: pointer;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
 
       transition: filter ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(4593%) hue-rotate(279deg) brightness(109%) contrast(124%);
       }
     }
 
-    &-new{
+    &-new {
       position: absolute;
       top: VW(-2px);
       right: VW(-2px);
@@ -524,28 +532,28 @@ input[data-autocompleted] {
     }
   }
 
-  &__profile{
+  &__profile {
     width: VW(21px);
     height: VW(21px);
 
     transition: filter ease-in-out 250ms;
 
-    &:hover{
+    &:hover {
       filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(4593%) hue-rotate(279deg) brightness(109%) contrast(124%);
     }
 
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
   }
 }
 
-.auth{
+.auth {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 
   width: VW(360px);
 
@@ -553,74 +561,75 @@ input[data-autocompleted] {
   align-items: center;
   text-align: center;
 
-  &__head{
+  &__head {
     font-weight: 700;
-    font-size:VW(32px);
+    font-size: VW(32px);
 
     margin-bottom: VW(20px);
   }
 
-  &__input{
+  &__input {
     margin-top: VW(30px);
     height: VW(60px);
   }
 
-  &__link{
+  &__link {
     color: #00000080;
 
     margin-top: VW(20px);
 
     transition: color ease-in-out 250ms;
 
-    &:hover{
+    &:hover {
       color: #000000;
     }
   }
 
-  &__btn{
+  &__btn {
     margin-top: VW(50px);
   }
 
-  &__text{
+  &__text {
     margin-top: VW(20px);
-    a{
+
+    a {
       color: #B700FF;
     }
   }
 }
 
-.main{
+.main {
   padding: VW(110px) VW(200px);
   display: grid;
   gap: VW(50px);
 
-  &__filters{
+  &__filters {
     display: grid;
     grid-template-columns: 1fr repeat(3, VW(280px));
     gap: VW(40px);
 
     height: VW(50px);
 
-    &-input{
+    &-input {
       height: VW(50px);
     }
   }
 
-  &__events{
+  &__events {
     display: grid;
     gap: VW(40px);
 
-    &-head{
+    &-head {
       font-weight: 700;
       font-size: VW(28px);
     }
 
-    &-content{
+    &-content {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: VW(40px);
 
-      &-slide{
+      &-slide {
         display: grid;
         grid-template-rows: VW(195px) VW(83px) 1fr VW(49px);
         background-color: #FFFFFF;
@@ -628,7 +637,7 @@ input[data-autocompleted] {
         height: 100%;
         //overflow: hidden;
 
-        &-pic{
+        &-pic {
           position: relative;
           width: 100%;
           height: VW(195px);
@@ -637,11 +646,11 @@ input[data-autocompleted] {
 
           transition: transform ease-in-out 250ms;
 
-          &:hover{
+          &:hover {
             transform: scale(1.04);
           }
 
-          img{
+          img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -651,7 +660,7 @@ input[data-autocompleted] {
             pointer-events: none;
           }
 
-          p{
+          p {
             position: absolute;
             bottom: VW(20px);
             left: VW(20px);
@@ -663,58 +672,58 @@ input[data-autocompleted] {
           }
         }
 
-        &-head{
+        &-head {
           font-size: VW(20px);
           margin: VW(20px) VW(20px) VW(15px);
         }
 
-        &-dates{
+        &-dates {
           display: flex;
           gap: VW(30px);
           margin: 0 VW(20px) VW(5px);
 
-          &-date{
+          &-date {
             display: grid;
             grid-template-columns: min-content min-content;
             grid-template-rows: repeat(3, 1fr);
             align-items: center;
             gap: VW(2px) VW(8px);
 
-            span{
+            span {
               grid-column: span 2;
               font-size: VW(14px);
               color: #ACB6BF;
             }
 
-            h4{
+            h4 {
               grid-row: span 2;
               font-size: VW(36px);
             }
 
-            p{
+            p {
               font-size: VW(14px);
               align-self: end;
 
-              &:last-child{
+              &:last-child {
                 align-self: start;
               }
             }
           }
         }
 
-        &-info{
+        &-info {
           display: flex;
           justify-content: space-between;
           align-items: end;
 
           margin: 0 VW(20px) VW(20px);
 
-          p{
+          p {
             font-size: VW(14px);
             color: #ACB6BF;
           }
 
-          &-price{
+          &-price {
             font-weight: 700;
             font-size: VW(11px);
             color: #B700FF;
@@ -724,7 +733,7 @@ input[data-autocompleted] {
             background-color: #B700FF1A;
             border-radius: VW(8px);
 
-            &_free{
+            &_free {
               color: #4BB543;
               background-color: #4BB5431A;
             }
@@ -735,13 +744,13 @@ input[data-autocompleted] {
   }
 }
 
-.event{
+.event {
   padding: VW(110px) VW(200px);
   display: grid;
   grid-template-columns: 1fr VW(250px);
   gap: VW(50px) VW(112px);
 
-  &__card{
+  &__card {
     grid-column: span 2;
 
     display: grid;
@@ -753,13 +762,13 @@ input[data-autocompleted] {
     background-color: #FFFFFF;
     border-radius: VW(50px);
 
-    &-pic{
+    &-pic {
       grid-row: span 4;
       width: 100%;
       border-radius: VW(25px);
       overflow: hidden;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -767,46 +776,46 @@ input[data-autocompleted] {
       }
     }
 
-    &-tags{
+    &-tags {
       display: flex;
       gap: VW(30px);
       align-items: center;
 
-      &-tag{
+      &-tag {
         padding: VW(8px) VW(16px);
         font-size: VW(14px);
 
         border-radius: VW(8px);
         box-shadow: 0 0 VW(40px) 0 #00000014;
 
-        &_closed{
+        &_closed {
           color: #FF0000;
           background-color: #FF00001A;
         }
       }
     }
 
-    &-links{
+    &-links {
       justify-self: end;
       display: flex;
       gap: VW(15px);
       align-items: center;
 
-      &-link{
+      &-link {
         font-size: VW(14px);
         color: #ACB6BF;
         text-decoration: underline;
 
         transition: color ease-in-out 250ms;
 
-        &:hover{
+        &:hover {
           color: #000000;
         }
       }
 
     }
 
-    &-title{
+    &-title {
       grid-column: span 2;
       display: flex;
       align-items: center;
@@ -815,83 +824,83 @@ input[data-autocompleted] {
       font-size: VW(32px);
     }
 
-    &-info{
+    &-info {
       grid-column: span 2;
       display: grid;
       gap: VW(15px);
 
-      &-item{
+      &-item {
         display: flex;
         align-items: center;
 
-        &-pic{
+        &-pic {
           width: VW(16px);
           margin-right: VW(15px);
 
-          img{
+          img {
             width: 100%;
             height: 100%;
           }
         }
 
-        &-text{
+        &-text {
           font-size: VW(16px);
 
-          span{
+          span {
             color: #FF0000;
           }
 
-          &_prpl{
+          &_prpl {
             color: #B700FF;
           }
         }
 
-        &-ppl{
+        &-ppl {
           width: VW(14px);
           height: VW(14px);
 
           margin: 0 VW(10px) 0 VW(20px);
 
-          img{
+          img {
             width: 100%;
             height: 100%;
           }
         }
 
-        &-amount{
+        &-amount {
           font-size: VW(16px);
           color: #ACB6BF;
           text-decoration: underline;
 
           transition: color ease-in-out 250ms;
 
-          &:hover{
+          &:hover {
             color: #000000;
           }
         }
       }
     }
 
-    &-btn{
+    &-btn {
       grid-column: 3/4;
     }
   }
 
-  &__desc{
+  &__desc {
     display: grid;
     gap: VW(40px);
     height: fit-content;
 
-    &-head{
+    &-head {
       font-weight: 700;
       font-size: VW(28px);
     }
 
-    &-text{
+    &-text {
       font-size: VW(20px);
     }
 
-    &-download{
+    &-download {
       display: grid;
       grid-template-columns: VW(30px) max-content 1fr;
       gap: VW(6px) VW(15px);
@@ -903,37 +912,37 @@ input[data-autocompleted] {
       background-color: #FFFFFF;
       border-radius: VW(16px);
 
-      &-pic{
+      &-pic {
         grid-row: span 2;
         width: 100%;
 
-        img{
+        img {
           width: 100%;
           height: 100%;
         }
       }
 
-      p{
+      p {
         grid-column: span 2;
         font-size: VW(16px);
       }
 
-      span{
+      span {
         font-size: VW(16px);
         color: #ACB6BF;
       }
     }
   }
 
-  &__host{
+  &__host {
     display: grid;
 
-    &-head{
+    &-head {
       font-size: VW(28px);
       font-weight: 700;
     }
 
-    &-pic{
+    &-pic {
       width: 100%;
       height: VW(250px);
 
@@ -942,7 +951,7 @@ input[data-autocompleted] {
 
       margin: VW(40px) 0 VW(30px);
 
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -950,41 +959,41 @@ input[data-autocompleted] {
       }
     }
 
-    &-subhead{
+    &-subhead {
       font-size: VW(16px);
       color: #ACB6BF;
 
       margin-bottom: VW(10px);
     }
 
-    &-text{
+    &-text {
       font-size: VW(16px);
 
       margin-bottom: VW(15px);
     }
 
-    &-contact{
+    &-contact {
       display: flex;
       gap: VW(10px);
       align-items: center;
 
       cursor: pointer;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: VW(10px);
       }
 
-      img{
+      img {
         width: VW(27px);
       }
 
-      &:hover{
-        p{
-            text-decoration: underline;
+      &:hover {
+        p {
+          text-decoration: underline;
         }
       }
 
-      p{
+      p {
         font-size: VW(16px);
 
         transition: text-decoration ease-in-out 250ms;
@@ -993,24 +1002,24 @@ input[data-autocompleted] {
   }
 }
 
-.profile{
+.profile {
   position: relative;
   display: grid;
   gap: VW(40px);
 
   padding: VW(110px) VW(200px) VW(300px);
 
-  &__head{
+  &__head {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    h1{
+    h1 {
       font-weight: 700;
       font-size: VW(28px);
     }
 
-    button{
+    button {
       font-weight: 700;
       font-size: VW(28px);
 
@@ -1024,7 +1033,7 @@ input[data-autocompleted] {
     }
   }
 
-  &__info{
+  &__info {
     display: grid;
     grid-template-columns: VW(488px) VW(388px) 1fr VW(161px);
     gap: VW(30px) VW(40px);
@@ -1033,7 +1042,7 @@ input[data-autocompleted] {
 
     margin-bottom: VW(10px);
 
-    &-pic{
+    &-pic {
       grid-row: span 4;
       width: 100%;
       height: 100%;
@@ -1045,13 +1054,13 @@ input[data-autocompleted] {
       border-radius: VW(26px);
       overflow: hidden;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      &-change{
+      &-change {
         position: absolute;
         top: VW(30px);
         right: VW(30px);
@@ -1071,38 +1080,38 @@ input[data-autocompleted] {
 
         transition: transform ease-in-out 250ms;
 
-        &:hover{
+        &:hover {
           transform: scale(1.1);
         }
       }
     }
 
-    &-block{
+    &-block {
       display: grid;
       gap: VW(15px);
 
-      &_span2{
+      &_span2 {
         grid-column: span 2;
       }
 
-      &_span3{
+      &_span3 {
         grid-column: span 3;
       }
     }
 
-    &_contact{
+    &_contact {
       grid-template-columns: 1fr 1fr;
       height: min-content;
     }
   }
 }
 
-.create{
+.create {
   display: grid;
   gap: VW(50px);
   padding: VW(110px) VW(200px);
 
-  &-item {
+  &__item {
     display: grid;
 
     &-head {
@@ -1120,7 +1129,7 @@ input[data-autocompleted] {
         font-weight: 700;
         font-size: VW(28px);
 
-        span{
+        span {
           font-weight: 700;
           font-size: VW(28px);
           color: #B700FF;
@@ -1139,6 +1148,7 @@ input[data-autocompleted] {
         user-select: none;
 
         transition: transform ease-in-out 250ms;
+
         img {
           width: 100%;
           height: 100%;
@@ -1159,18 +1169,50 @@ input[data-autocompleted] {
         overflow: hidden;
       }
 
-      &-text{
+      &-text {
         margin-top: VW(30px);
         font-weight: 600;
         font-size: VW(18px);
       }
 
-      &-input{
+      &-input {
         margin-top: VW(30px);
         width: VW(730px);
       }
+      &-input_short {
+        width: VW(320px);
+      }
 
-      &-file{
+      &-dates{
+        margin-top: VW(30px);
+        display: grid;
+        grid-template-columns: VW(400px) VW(100px);
+        gap: VW(20px) VW(30px);
+
+        &-remove{
+          color: #FF0000;
+          text-decoration: underline;
+
+          outline: none;
+          border: none;
+          background: none;
+
+          cursor: pointer;
+        }
+      }
+
+      &-add{
+        margin-top: VW(20px);
+        color: #ACB6BF;
+        text-decoration: underline;
+
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      &-file {
         height: VW(60px);
 
         margin-top: VW(30px);
@@ -1179,7 +1221,7 @@ input[data-autocompleted] {
         grid-template-columns: VW(320px) 1fr;
         gap: VW(6px) VW(30px);
 
-        &-upload{
+        &-upload {
           height: 100%;
           width: 100%;
 
@@ -1199,14 +1241,15 @@ input[data-autocompleted] {
           user-select: none;
         }
 
-        p{
+        p {
           align-self: end;
-          span{
+
+          span {
             color: #ACB6BF;
           }
         }
 
-        &-delete{
+        &-delete {
           align-self: start;
           color: #FF0000;
           text-decoration: underline;
@@ -1219,6 +1262,103 @@ input[data-autocompleted] {
         }
       }
 
+      &-radios {
+        display: flex;
+        align-items: center;
+        gap: VW(30px);
+
+        margin-top: VW(30px);
+
+        &-btn {
+          display: flex;
+          align-items: center;
+          gap: VW(15px);
+
+          cursor: pointer;
+          user-select: none;
+
+          &:hover span {
+            border-color: #B700FF;
+          }
+
+          span {
+            position: relative;
+            display: block;
+            content: "";
+            width: VW(18px);
+            height: VW(18px);
+
+            border: VW(3px) solid #000000;
+            border-radius: 50%;
+
+            transition: border ease-in-out 250ms;
+
+          }
+        }
+
+        input:checked + label {
+
+          span {
+            border-color: #B700FF;
+
+            &:after {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              display: block;
+              content: "";
+              width: VW(8px);
+              height: VW(8px);
+
+              background: #B700FF;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      &-inputs{
+        display: grid;
+        grid-template-columns: VW(320px) VW(380px);
+        align-content: center;
+        gap: VW(30px);
+
+        p{
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &-hidden{
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 400ms, margin 400ms;
+
+
+        &_show{
+          margin-top: VW(30px);
+          grid-template-rows: 1fr;
+        }
+      }
+
+      &-dropdown{
+        width: VW(320px);
+        height: VW(60px);
+
+        margin-top: VW(30px);
+        position: static;
+
+        &-select{
+          position: relative;
+        }
+
+        &-menu{
+          width: VW(320px);
+          //position: fixed;
+        }
+      }
+
       &_active {
         grid-template-rows: 1fr;
       }
@@ -1226,11 +1366,6 @@ input[data-autocompleted] {
     }
   }
 }
-
-
-
-
-
 
 
 .hide-on-desktop {
@@ -1288,7 +1423,7 @@ input[data-autocompleted] {
     }
   }
 
-  .input_white{
+  .input_white {
     position: relative;
     width: 100%;
     height: VWMob(30px);
@@ -1296,7 +1431,7 @@ input[data-autocompleted] {
     background-color: #FFFFFF;
     border-radius: VWMob(8px);
 
-    &-field{
+    &-field {
       position: absolute;
       left: VWMob(15px);
       top: 50%;
@@ -1307,12 +1442,12 @@ input[data-autocompleted] {
       border: none;
       outline: none;
 
-      &::placeholder{
+      &::placeholder {
         color: #6F7071;
       }
     }
 
-    &-eye{
+    &-eye {
       position: absolute;
       top: VWMob(13px);
       right: VWMob(14.5px);
@@ -1323,13 +1458,13 @@ input[data-autocompleted] {
       cursor: pointer;
       user-select: none;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
 
-    &-search{
+    &-search {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -1341,7 +1476,7 @@ input[data-autocompleted] {
 
       cursor: pointer;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1486,7 +1621,7 @@ input[data-autocompleted] {
 
         cursor: pointer;
 
-        &-text{
+        &-text {
           font-size: VWMob(12px);
         }
 
@@ -1502,7 +1637,7 @@ input[data-autocompleted] {
     }
   }
 
-  .header{
+  .header {
     position: fixed;
     top: 0;
     z-index: 10;
@@ -1518,48 +1653,48 @@ input[data-autocompleted] {
 
     background-color: #FFFFFF;
 
-    &__logo{
+    &__logo {
       width: VWMob(94px);
       height: VWMob(24px);
 
       margin-left: VWMob(20px);
       margin-right: auto;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
 
-    &__link{
+    &__link {
       font-size: VWMob(12px);
 
       transition: color ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         color: #B700FF;
       }
 
-      &_active{
+      &_active {
         color: #B700FF;
       }
 
-      &_mid{
+      &_mid {
         margin: 0;
       }
     }
 
-    &__btnMob{
+    &__btnMob {
       width: VWMob(20px);
       height: VWMob(20px);
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
 
-    &__notify{
+    &__notify {
       position: relative;
 
       width: VWMob(13.5px);
@@ -1571,19 +1706,19 @@ input[data-autocompleted] {
 
       cursor: pointer;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
 
         transition: filter ease-in-out 250ms;
 
-        &:hover{
+        &:hover {
           filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(4593%) hue-rotate(279deg) brightness(109%) contrast(124%);
         }
       }
 
-      &-new{
+      &-new {
         position: absolute;
         top: VWMob(-1.5px);
         right: VWMob(-1.5px);
@@ -1602,7 +1737,7 @@ input[data-autocompleted] {
       }
     }
 
-    &__profile{
+    &__profile {
       width: VWMob(14px);
       height: VWMob(14px);
 
@@ -1610,17 +1745,17 @@ input[data-autocompleted] {
 
       transition: filter ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(4593%) hue-rotate(279deg) brightness(109%) contrast(124%);
       }
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
 
-    &__mob{
+    &__mob {
       display: flex;
       gap: VWMob(20px);
       justify-content: center;
@@ -1636,11 +1771,11 @@ input[data-autocompleted] {
     }
   }
 
-  .auth{
+  .auth {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     width: VWMob(262px);
 
@@ -1648,41 +1783,42 @@ input[data-autocompleted] {
     align-items: center;
     text-align: center;
 
-    &__head{
+    &__head {
       font-weight: 700;
-      font-size:VWMob(20px);
+      font-size: VWMob(20px);
 
       margin-bottom: VWMob(10px);
     }
 
-    &__input{
+    &__input {
       margin-top: VWMob(15px);
     }
 
-    &__link{
+    &__link {
       color: #00000080;
 
       margin-top: VWMob(10px);
     }
 
-    &__btn{
+    &__btn {
       margin-top: VWMob(25px);
     }
 
-    &__text{
+    &__text {
       margin-top: VWMob(10px);
-      a{
+
+      a {
         color: #B700FF;
       }
     }
   }
 
-  .main{
+  .main {
     padding: VWMob(105px) VWMob(15px);
     display: grid;
     gap: VWMob(20px);
 
-    &__filters{
+    &__filters {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: VWMob(10px) VWMob(8px);
@@ -1691,25 +1827,25 @@ input[data-autocompleted] {
       width: VWMob(290px);
       height: unset;
 
-      &-input{
+      &-input {
         grid-column: span 2;
       }
 
-      &-dropdown_1{
+      &-dropdown_1 {
         grid-column: span 2;
       }
     }
 
-    &__events{
+    &__events {
       display: grid;
       gap: VWMob(15px);
 
-      &-head{
+      &-head {
         font-weight: 700;
         font-size: VWMob(20px);
       }
 
-      &-content{
+      &-content {
         display: grid;
         grid-template-columns: unset;
         grid-auto-flow: column;
@@ -1724,14 +1860,14 @@ input[data-autocompleted] {
         scroll-snap-type: inline mandatory;
         scroll-padding-inline: VWMob(15px);
 
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
 
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
           display: none;
         }
 
-        &-slide{
+        &-slide {
           display: grid;
           grid-template-rows: VWMob(146px) VWMob(60px) 1fr VWMob(38px);
           background-color: #FFFFFF;
@@ -1741,11 +1877,11 @@ input[data-autocompleted] {
           margin-left: VWMob(15px);
           scroll-snap-align: start;
 
-          &:last-child{
+          &:last-child {
             //margin-right: VWMob(45px);
           }
 
-          &-pic{
+          &-pic {
             position: relative;
             width: 100%;
             height: VWMob(146px);
@@ -1754,11 +1890,11 @@ input[data-autocompleted] {
 
             transition: transform ease-in-out 250ms;
 
-            &:hover{
+            &:hover {
               transform: scale(1);
             }
 
-            img{
+            img {
               width: 100%;
               height: 100%;
               object-fit: cover;
@@ -1768,7 +1904,7 @@ input[data-autocompleted] {
               pointer-events: none;
             }
 
-            p{
+            p {
               position: absolute;
               bottom: VWMob(10px);
               left: VWMob(10px);
@@ -1780,58 +1916,58 @@ input[data-autocompleted] {
             }
           }
 
-          &-head{
+          &-head {
             font-size: VWMob(16px);
             margin: VWMob(10px) VWMob(15px);
           }
 
-          &-dates{
+          &-dates {
             display: flex;
             gap: VWMob(20px);
             margin: 0 VWMob(15px) VWMob(5px);
 
-            &-date{
+            &-date {
               display: grid;
               grid-template-columns: min-content min-content;
               grid-template-rows: repeat(3, 1fr);
               align-items: center;
               gap: VWMob(1px) VWMob(6px);
 
-              span{
+              span {
                 grid-column: span 2;
                 font-size: VWMob(11px);
                 color: #ACB6BF;
               }
 
-              h4{
+              h4 {
                 grid-row: span 2;
                 font-size: VWMob(24px);
               }
 
-              p{
+              p {
                 font-size: VWMob(9px);
                 align-self: end;
 
-                &:last-child{
+                &:last-child {
                   align-self: start;
                 }
               }
             }
           }
 
-          &-info{
+          &-info {
             display: flex;
             justify-content: space-between;
             align-items: end;
 
             margin: 0 VWMob(15px) VWMob(15px);
 
-            p{
+            p {
               font-size: VWMob(11px);
               color: #ACB6BF;
             }
 
-            &-price{
+            &-price {
               font-weight: 700;
               font-size: VWMob(9px);
               color: #B700FF;
@@ -1841,7 +1977,7 @@ input[data-autocompleted] {
               background-color: #B700FF1A;
               border-radius: VWMob(6px);
 
-              &_free{
+              &_free {
                 color: #4BB543;
                 background-color: #4BB5431A;
               }
@@ -1851,7 +1987,6 @@ input[data-autocompleted] {
       }
     }
   }
-
 
 
   .hide-on-mob {
