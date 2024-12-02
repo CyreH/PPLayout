@@ -40,20 +40,20 @@
     </div>
 </header>
 
-<form class="invite">
+<section class="invite">
     <h1 class="invite__head">Хотите пригласить людей на мероприятие?</h1>
 
     <div class="invite__item">
         <h2 class="invite__item-head">Ссылка на подключение</h2>
         <p class="invite__item-text">Пришлите им ссылку, чтобы они смогли присоединиться к мероприятию и узнать все подробности о нём</p>
-        <button class="invite__item-link">https://asda//asd;a.wrere;asdasdasdasdasdasdkafkslfdkasld</button>
+        <p class="invite__item-link">https://asda//asd;a.wrere;asdasdasdasdasdasdkafkslfdkasld</p>
         <button class="invite__item-copy">
             <img src="../media/copy.svg" alt="copy">
         </button>
     </div>
 
     <div class="invite__item">
-        <h2 class="invite__item-head">invite__item-head</h2>
+        <h2 class="invite__item-head">Отправить приглашение на почту</h2>
         <p class="invite__item-text">Отправьте приглашение на почту участникам - они получат письмо с информацией о мероприятии и ссылкой для подключения</p>
         <div class="invite__item-input input_white">
             <input class="input_white-field" type="email" placeholder="Почта">
@@ -65,11 +65,113 @@
         <button class="invite__item-send btn_black">Отправить приглашение</button>
     </div>
 
-    <div class="save save_hide">
-        <p>Проверьте, что все обязательные поля заполнены</p>
-        <button type="submit" class="save__btn btn_black">Создать мероприятие</button>
+    <div class="invite__item">
+        <h2 class="invite__item-head">Пригласить людей из команд</h2>
+        <p class="invite__item-text">Выберите участников из ваших команд, кому отправить приглашение на мероприятие</p>
+
+        <a href="" class="invite__item-create">Создать команду</a>
+
+        <form class="invite__item-invites">
+            <div class="invite__item-team">
+                <div class="invite__item-team-head invite__item-team-head_active">
+                    <input id="inviteCheckbox1" type="checkbox" class="visually-hidden">
+                    <label for="inviteCheckbox1" class="invite__item-team-head-checkbox">
+                        <img src="../media/checkbox.svg" alt="&#x2705;">
+                    </label>
+                    <h1>Команда 1</h1>
+                    <div class="invite__item-team-head-pic">
+                        <img src="../media/caret.svg" alt="caret">
+                    </div>
+                </div>
+                <div class="invite__item-team-content invite__item-team-content_active">
+                    <div class="invite__item-team-content-wrap">
+                        <div class="invite__item-team-content-member">
+                            <input id="inviteCheckbox1_1" type="checkbox" class="visually-hidden">
+                            <label for="inviteCheckbox1_1" class="invite__item-team-content-member-checkbox">
+                                <img src="../media/checkbox.svg" alt="&#x2705;">
+                            </label>
+                            <p class="invite__item-team-content-member-text">utenkov2003@mailr.u</p>
+                        </div>
+                        <div class="invite__item-team-content-member">
+                            <input id="inviteCheckbox1_2" type="checkbox" class="visually-hidden">
+                            <label for="inviteCheckbox1_2" class="invite__item-team-content-member-checkbox">
+                                <img src="../media/checkbox.svg" alt="&#x2705;">
+                            </label>
+                            <p class="invite__item-team-content-member-text">Богданов Богдан Богданович</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="invite__item-team">
+                <div class="invite__item-team-head">
+                    <input id="inviteCheckbox2" type="checkbox" class="visually-hidden">
+                    <label for="inviteCheckbox2" class="invite__item-team-head-checkbox">
+                        <img src="../media/checkbox.svg" alt="&#x2705;">
+                    </label>
+                    <h1>Команда 1</h1>
+                    <div class="invite__item-team-head-pic">
+                        <img src="../media/caret.svg" alt="caret">
+                    </div>
+                </div>
+                <div class="invite__item-team-content">
+                    <div class="invite__item-team-content-wrap">
+                        <div class="invite__item-team-content-member">
+                            <input id="inviteCheckbox2_1" type="checkbox" class="visually-hidden">
+                            <label for="inviteCheckbox2_1" class="invite__item-team-content-member-checkbox">
+                                <img src="../media/checkbox.svg" alt="&#x2705;">
+                            </label>
+                            <p class="invite__item-team-content-member-text">utenkov2003@mailr.u</p>
+                        </div>
+                        <div class="invite__item-team-content-member">
+                            <input id="inviteCheckbox2_2" type="checkbox" class="visually-hidden">
+                            <label for="inviteCheckbox2_2" class="invite__item-team-content-member-checkbox">
+                                <img src="../media/checkbox.svg" alt="&#x2705;">
+                            </label>
+                            <p class="invite__item-team-content-member-text">Богданов Богдан Богданович</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="invite__item-team">
+                <div class="invite__item-team-head">
+                    <input id="inviteCheckbox3" type="checkbox" class="visually-hidden">
+                    <label for="inviteCheckbox3" class="invite__item-team-head-checkbox">
+                        <img src="../media/checkbox.svg" alt="&#x2705;">
+                    </label>
+                    <h1>Команда 1</h1>
+                    <div class="invite__item-team-head-pic">
+                        <img src="../media/caret.svg" alt="caret">
+                    </div>
+                </div>
+                <div class="invite__item-team-content">
+                    <div class="invite__item-team-content-wrap">
+                        <div class="invite__item-team-content-member">
+                            <input id="inviteCheckbox3_1" type="checkbox" class="visually-hidden">
+                            <label for="inviteCheckbox3_1" class="invite__item-team-content-member-checkbox">
+                                <img src="../media/checkbox.svg" alt="&#x2705;">
+                            </label>
+                            <p class="invite__item-team-content-member-text">utenkov2003@mailr.u</p>
+                        </div>
+                        <div class="invite__item-team-content-member">
+                            <input id="inviteCheckbox3_2" type="checkbox" class="visually-hidden">
+                            <label for="inviteCheckbox3_2" class="invite__item-team-content-member-checkbox">
+                                <img src="../media/checkbox.svg" alt="&#x2705;">
+                            </label>
+                            <p class="invite__item-team-content-member-text">Богданов Богдан Богданович</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="invite__item-invites-btn btn_black">Отправить приглашение</button>
+        </form>
     </div>
-</form>
+
+    <div class="save save_hide">
+        <p>Если не хотите приглашать людей, просто нажмите далее</p>
+        <button type="submit" class="save__btn btn_black">Далее</button>
+    </div>
+</section>
 
 <script>
     // функция для роста textarea в зависимости от контента
