@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Dialogs page</title>
+</head>
+<body>
+
+<main>
+    <button id="dialogBtn1" class="btn_black">Список участников</button>
+    <button id="dialogBtn2" class="btn_black">Изменить аватар</button>
+</main>
+
+<dialog class="dialog dialog_members">
+    <form method="dialog" class="dialog__content">
+        <button class="dialog__content-close" formmethod="dialog">
+            <img src="../media/closeCross.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="dialog__content-title">Регистрация</h2>
+
+        <div class="dialog__content-dropdown dropdown">
+            <div class="dropdown-select">
+                <div class="dropdown-select-selected"><span>Даты:</span>&nbsp;<p class="dropdown-select-selected-text">в
+                    любое время</p></div>
+                <div class="dropdown-select-caret">
+                    <img src="../media/caret.svg" alt="caret">
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-menu-wrapper">
+                    <div class="dropdown-menu-item">
+                        <p class="dropdown-menu-item-text">Онлайн</p>
+                    </div>
+                    <div class="dropdown-menu-item">
+                        <p class="dropdown-menu-item-text">Екатеринбург</p>
+                    </div>
+                    <div class="dropdown-menu-item">
+                        <p class="dropdown-menu-item-text">Москва</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog__content-members">
+            <p>Участники 323/500:</p>
+            <div>
+                <img src="../media/pdf.svg" alt="pdf">
+            </div>
+            <div>
+                <img src="../media/xls.svg" alt="xls">
+            </div>
+        </div>
+
+        <div class="dialog__content-member">
+            <div class="dialog__content-member-pic">
+                <img src="../media/defaultAvatar.png" alt="defaultAvatar">
+            </div>
+            <p>Богданов Богдан Богданович</p>
+
+            <div class="dialog__content-member-links">
+                <a href="">
+                    <img src="../media/socials/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="">
+                    <img src="../media/socials/vk.svg" alt="vk">
+                </a>
+                <a href="">
+                    <img src="../media/socials/tg.svg" alt="tg">
+                </a>
+                <a href="">
+                    <img src="../media/socials/mail.svg" alt="mail">
+                </a>
+            </div>
+        </div>
+
+        <div class="dialog__content-member">
+            <div class="dialog__content-member-pic">
+                <img src="../media/defaultAvatar.png" alt="defaultAvatar">
+            </div>
+            <p>Богданов Богдан Богданович</p>
+
+            <div class="dialog__content-member-links">
+                <a href="">
+                    <img src="../media/socials/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="">
+                    <img src="../media/socials/vk.svg" alt="vk">
+                </a>
+                <a href="">
+                    <img src="../media/socials/tg.svg" alt="tg">
+                </a>
+                <a href="">
+                    <img src="../media/socials/mail.svg" alt="mail">
+                </a>
+            </div>
+        </div>
+    </form>
+</dialog>
+
+<dialog class="dialog dialog_change">
+    <form method="dialog" class="dialog__content">
+        <button class="dialog__content-close" formmethod="dialog">
+            <img src="../media/closeCross.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="dialog__content-title">Смена аватара</h2>
+        
+        <p class="dialog__content-text">Формат: .jpg, .png и .bmp, размер от 400 пикселей в ширину и высоту, вес до 2 MB</p>
+
+        <div class="dialog__content-upload">
+            <button class="dialog__content-upload-btn">+</button>
+            <p>megatz.png</p>
+            <span>3.2 Мб</span>
+        </div>
+        
+        <button formmethod="dialog" type="submit" class="dialog__content-btn btn_black">Изменить аватар</button>
+    </form>
+</dialog>
+
+<script>
+
+    let dialogs = document.querySelectorAll('.dialog')
+
+    let openDialog1 = document.getElementById('dialogBtn1');
+    let dialog1 = document.querySelector('.dialog_members');
+
+    let openDialog2 = document.getElementById('dialogBtn2');
+    let dialog2 = document.querySelector('.dialog_change');
+
+    openDialog1.addEventListener('click', () => {
+        dialog1.showModal()
+    })
+    openDialog2.addEventListener('click', () => {
+        dialog2.showModal()
+    })
+
+    dialogs.forEach(dialog => {
+        dialog.addEventListener("mousedown", e => {
+            const dialogDimensions = dialog.getBoundingClientRect()
+            if (
+                e.clientX < dialogDimensions.left ||
+                e.clientX > dialogDimensions.right ||
+                e.clientY < dialogDimensions.top ||
+                e.clientY > dialogDimensions.bottom
+            ) {
+                dialog.close()
+            }
+        })
+    })
+
+
+    // dropdown
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const select = dropdown.querySelector('.dropdown-select');
+        const caret = dropdown.querySelector('.dropdown-select-caret');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const options = dropdown.querySelectorAll('.dropdown-menu-item');
+        const selected = dropdown.querySelector('.dropdown-select-selected');
+
+        select.addEventListener('click', () => {
+            select.classList.toggle('dropdown-select_active');
+            caret.classList.toggle('dropdown-select-caret_rotate');
+            menu.classList.toggle('dropdown-menu_open');
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                const optionText = option.querySelector('.dropdown-menu-item-text');
+                selected.textContent = optionText.textContent;
+                select.classList.remove('dropdown-select_active');
+                caret.classList.remove('dropdown-select-caret_rotate');
+                menu.classList.remove('dropdown-menu_open');
+            })
+        });
+
+        window.addEventListener('click', e => {
+            const size = dropdown.getBoundingClientRect();
+            if (
+                e.clientX < size.left ||
+                e.clientX > size.right ||
+                e.clientY < size.top ||
+                e.clientY > size.bottom
+            ) {
+                select.classList.remove('dropdown-select_active');
+                caret.classList.remove('dropdown-select-caret_rotate');
+                menu.classList.remove('dropdown-menu_open');
+            }
+        })
+    })
+    // end of dropdown
+</script>
+</body>
+</html>
