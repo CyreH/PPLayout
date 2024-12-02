@@ -354,10 +354,10 @@
     const createLimitedInfo = document.getElementById('createMembersLimitedAmount');
 
     createOffline.addEventListener("change", () => {
-        createOfflineInfo.classList.remove("create__item-content-hidden_show");
+        createOfflineInfo.classList.add("create__item-content-hidden_show");
     })
     createOnline.addEventListener("change", () => {
-        createOfflineInfo.classList.add("create__item-content-hidden_show");
+        createOfflineInfo.classList.remove("create__item-content-hidden_show");
     })
 
     createFree.addEventListener("change", () => {
