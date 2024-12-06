@@ -13,15 +13,19 @@
 <main>
     <button id="dialogBtn1" class="btn_black">Список участников</button>
     <button id="dialogBtn2" class="btn_black">Изменить аватар</button>
+    <button id="dialogBtn3" class="btn_black">Смена пароля</button>
+    <button id="dialogBtn4" class="btn_black">Подача заявки</button>
+    <button id="dialogBtn5" class="btn_black">Благодарим за запись</button>
+    <button id="dialogBtn6" class="btn_black">Завершение мероприятия</button>
 </main>
 
 <dialog class="dialog dialog_members">
     <form method="dialog" class="dialog__content">
-        <button class="dialog__content-close" formmethod="dialog">
+        <button class="dialog__content-close" formnovalidate>
             <img src="../media/closeCross.svg" alt="закрыть"/>
         </button>
 
-        <h2 class="dialog__content-title">Регистрация</h2>
+        <h2 class="dialog__content-title">Список участников</h2>
 
         <div class="dialog__content-dropdown dropdown">
             <div class="dropdown-select">
@@ -104,7 +108,7 @@
 
 <dialog class="dialog dialog_change">
     <form method="dialog" class="dialog__content">
-        <button class="dialog__content-close" formmethod="dialog">
+        <button class="dialog__content-close" formnovalidate>
             <img src="../media/closeCross.svg" alt="закрыть"/>
         </button>
 
@@ -122,36 +126,160 @@
     </form>
 </dialog>
 
+<dialog class="dialog dialog_pass">
+    <form method="dialog" class="dialog__content">
+        <button class="dialog__content-close" formnovalidate>
+            <img src="../media/closeCross.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="dialog__content-title">Смена пароля</h2>
+
+        <div class="dialog__content-gap dialog__content-gap_30">
+            <div class="dialog__content-input input_white input_pass">
+                <input class="input_white-field input_white-field_pass" type="password" placeholder="Старый пароль" required>
+                <div class="input_white-show input_white-eye input_white-eye_active">
+                    <img src="../media/showPassIcon.svg" alt="show" draggable="false">
+                </div>
+                <div class="input_white-hide input_white-eye">
+                    <img src="../media/hidePassIcon.svg" alt="hide" draggable="false">
+                </div>
+            </div>
+            <div class="dialog__content-input input_white input_pass">
+                <input class="input_white-field input_white-field_pass" type="password" placeholder="Новый пароль" required>
+                <div class="input_white-show input_white-eye input_white-eye_active">
+                    <img src="../media/showPassIcon.svg" alt="show" draggable="false">
+                </div>
+                <div class="input_white-hide input_white-eye">
+                    <img src="../media/hidePassIcon.svg" alt="hide" draggable="false">
+                </div>
+            </div>
+            <div class="dialog__content-input input_white input_pass">
+                <input class="input_white-field input_white-field_pass" type="password" placeholder="Повторите пароль" required>
+                <div class="input_white-show input_white-eye input_white-eye_active">
+                    <img src="../media/showPassIcon.svg" alt="show" draggable="false">
+                </div>
+                <div class="input_white-hide input_white-eye">
+                    <img src="../media/hidePassIcon.svg" alt="hide" draggable="false">
+                </div>
+            </div>
+        </div>
+
+        <button formmethod="dialog" type="submit" class="dialog__content-btn btn_black">Изменить пароль</button>
+    </form>
+</dialog>
+
+<dialog class="dialog dialog_request">
+    <form method="dialog" class="dialog__content">
+        <button class="dialog__content-close" formnovalidate>
+            <img src="../media/closeCross.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="dialog__content-title">Подача заявки</h2>
+
+        <div class="dialog__content-gap dialog__content-gap_30">
+            <div class="dialog__content-dropdown dropdown">
+                <div class="dropdown-select">
+                    <div class="dropdown-select-selected"><span>Даты:</span>&nbsp;<p class="dropdown-select-selected-text">в
+                        любое время</p></div>
+                    <div class="dropdown-select-caret">
+                        <img src="../media/caret.svg" alt="caret">
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="dropdown-menu-wrapper">
+                        <div class="dropdown-menu-item">
+                            <p class="dropdown-menu-item-text">Онлайн</p>
+                        </div>
+                        <div class="dropdown-menu-item">
+                            <p class="dropdown-menu-item-text">Екатеринбург</p>
+                        </div>
+                        <div class="dropdown-menu-item">
+                            <p class="dropdown-menu-item-text">Москва</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog__content-input input_white">
+                <input class="input_white-field input_white-field_pass" type="text" placeholder="Название доп поля">
+            </div>
+        </div>
+        <button formmethod="dialog" type="submit" class="dialog__content-btn btn_black">Записаться</button>
+    </form>
+</dialog>
+
+<dialog class="dialog dialog_gratz">
+    <form method="dialog" class="dialog__content">
+        <button class="dialog__content-close" formnovalidate>
+            <img src="../media/closeCross.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="dialog__content-title dialog__content-title_no-margin">Благодарим за запись</h2>
+    </form>
+</dialog>
+
+<dialog class="dialog dialog_end">
+    <form method="dialog" class="dialog__content">
+        <button class="dialog__content-close" formnovalidate>
+            <img src="../media/closeCross.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="dialog__content-title dialog__content-title_red dialog__content-title_no-margin">Завершение мероприятия</h2>
+
+        <button formmethod="dialog" type="submit" class="dialog__content-btn btn_black">Подтвердить</button>
+    </form>
+</dialog>
+
 <script>
 
-    let dialogs = document.querySelectorAll('.dialog')
+    let dialogs = document.querySelectorAll('.dialog');
+    let btns = document.querySelectorAll('.btn_black');
 
-    let openDialog1 = document.getElementById('dialogBtn1');
-    let dialog1 = document.querySelector('.dialog_members');
 
-    let openDialog2 = document.getElementById('dialogBtn2');
-    let dialog2 = document.querySelector('.dialog_change');
+    for (let i = 0; i < dialogs.length; i++){
+        btns[i].addEventListener('click', () => {
+            dialogs[i].showModal()
+        })
 
-    openDialog1.addEventListener('click', () => {
-        dialog1.showModal()
-    })
-    openDialog2.addEventListener('click', () => {
-        dialog2.showModal()
-    })
-
-    dialogs.forEach(dialog => {
-        dialog.addEventListener("mousedown", e => {
-            const dialogDimensions = dialog.getBoundingClientRect()
+        dialogs[i].addEventListener("mousedown", e => {
+            const dialogDimensions = dialogs[i].getBoundingClientRect()
             if (
                 e.clientX < dialogDimensions.left ||
                 e.clientX > dialogDimensions.right ||
                 e.clientY < dialogDimensions.top ||
                 e.clientY > dialogDimensions.bottom
             ) {
-                dialog.close()
+                dialogs[i].close()
             }
         })
-    })
+    }
+
+    // let openDialog1 = document.getElementById('dialogBtn1');
+    // let dialog1 = document.querySelector('.dialog_members');
+    //
+    // let openDialog2 = document.getElementById('dialogBtn2');
+    // let dialog2 = document.querySelector('.dialog_change');
+
+    // openDialog1.addEventListener('click', () => {
+    //     dialog1.showModal()
+    // })
+    // openDialog2.addEventListener('click', () => {
+    //     dialog2.showModal()
+    // })
+
+
+    // dialogs.forEach(dialog => {
+    //     dialog.addEventListener("mousedown", e => {
+    //         const dialogDimensions = dialog.getBoundingClientRect()
+    //         if (
+    //             e.clientX < dialogDimensions.left ||
+    //             e.clientX > dialogDimensions.right ||
+    //             e.clientY < dialogDimensions.top ||
+    //             e.clientY > dialogDimensions.bottom
+    //         ) {
+    //             dialog.close()
+    //         }
+    //     })
+    // })
 
 
     // dropdown
