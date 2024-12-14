@@ -932,6 +932,17 @@ input[data-autocompleted] {
         color: #ACB6BF;
       }
     }
+
+    &-invite {
+      display: flex;
+      height: VW(60px);
+      gap: VW(30px);
+
+      &-input {
+        min-width: VW(730px);
+        width: VW(730px);
+      }
+    }
   }
 
   &__host {
@@ -1436,22 +1447,22 @@ input[data-autocompleted] {
       cursor: pointer;
     }
 
-    &-delete{
+    &-delete {
       color: #FF0000;
     }
 
-    &-send{
+    &-send {
       grid-column: span 2;
       width: VW(320px);
     }
 
-    &-create{
+    &-create {
       text-decoration: underline;
       color: #B700FF;
       grid-column: span 2;
     }
 
-    &-invites{
+    &-invites {
       width: VW(415px);
       display: grid;
       gap: VW(30px);
@@ -1471,7 +1482,7 @@ input[data-autocompleted] {
         cursor: pointer;
         user-select: none;
 
-        &-checkbox{
+        &-checkbox {
           display: block;
           content: "&#x2713";
           width: VW(18px);
@@ -1484,15 +1495,15 @@ input[data-autocompleted] {
 
           cursor: pointer;
 
-          img{
+          img {
             display: none;
           }
         }
 
-        input:checked + label{
+        input:checked + label {
           border: none;
 
-          img{
+          img {
             display: block;
             width: VW(18px);
             height: VW(18px);
@@ -1539,7 +1550,7 @@ input[data-autocompleted] {
           overflow: hidden;
         }
 
-        &-member{
+        &-member {
           display: flex;
           align-items: center;
 
@@ -1548,28 +1559,28 @@ input[data-autocompleted] {
           padding-top: VW(20px);
           margin-left: VW(33px);
 
-          &-checkbox{
-          display: block;
-          content: "&#x2713";
-          width: VW(18px);
-          height: VW(18px);
+          &-checkbox {
+            display: block;
+            content: "&#x2713";
+            width: VW(18px);
+            height: VW(18px);
 
-          border: #ACB6BF VW(2px) solid;
-          border-radius: VW(6px);
+            border: #ACB6BF VW(2px) solid;
+            border-radius: VW(6px);
 
-          overflow: hidden;
+            overflow: hidden;
 
-          cursor: pointer;
+            cursor: pointer;
 
-          img{
-            display: none;
+            img {
+              display: none;
+            }
           }
-        }
 
-          input:checked + label{
+          input:checked + label {
             border: none;
 
-            img{
+            img {
               display: block;
               width: VW(18px);
               height: VW(18px);
@@ -1587,19 +1598,19 @@ input[data-autocompleted] {
   }
 }
 
-.teams{
+.teams {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: VW(40px);
 
   padding: VW(110px) VW(200px);
 
-  &__input{
+  &__input {
     width: 100%;
     height: VW(50px);
   }
 
-  &__btn{
+  &__btn {
     width: VW(280px);
     height: VW(50px);
 
@@ -1609,7 +1620,7 @@ input[data-autocompleted] {
     justify-self: end;
   }
 
-  h2{
+  h2 {
     grid-column: span 2;
     font-weight: 700;
     font-size: VW(28px);
@@ -1617,7 +1628,7 @@ input[data-autocompleted] {
     margin-top: VW(10px);
   }
 
-  &__team{
+  &__team {
     display: grid;
     grid-template-columns: VW(345px) 1fr;
     gap: VW(20px);
@@ -1627,7 +1638,7 @@ input[data-autocompleted] {
     overflow: hidden;
     background: #FFFFFF;
 
-    &-pic{
+    &-pic {
       grid-row: span 2;
       width: 100%;
       height: 100%;
@@ -1635,7 +1646,7 @@ input[data-autocompleted] {
       border-radius: VW(25px);
       overflow: hidden;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
 
@@ -1644,21 +1655,169 @@ input[data-autocompleted] {
       }
     }
 
-    h3{
+    h3 {
       font-size: VW(20px);
       margin: VW(20px) VW(20px) 0 0;
     }
 
-    &-amount{
+    &-amount {
       display: flex;
       align-items: center;
       gap: VW(10px);
 
       margin: auto VW(20px) VW(20px) 0;
 
-      &-pic{
+      &-pic {
         width: VW(14px);
         height: VW(14px);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        color: #ACB6BF;
+      }
+    }
+  }
+}
+
+
+.team {
+  padding: VW(110px) VW(200px);
+  display: grid;
+
+  &__card {
+    display: grid;
+    grid-template-columns: VW(577px) 1fr VW(320px);
+    column-gap: VW(40px);
+
+    padding: VW(40px);
+
+    background-color: #FFFFFF;
+    border-radius: VW(50px);
+
+    &-pic {
+      grid-row: span 3;
+      width: 100%;
+      border-radius: VW(25px);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-title {
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: VW(32px);
+
+      margin-bottom: VW(30px);
+    }
+
+    &-text {
+      grid-column: span 2;
+      height: VW(158px);
+    }
+
+    &-exit {
+      align-self: end;
+      justify-self: start;
+
+      font-size: VW(14px);
+      color: #FF0000;
+
+      width: VW(175px);
+      height: VW(33px);
+
+      border-radius: VW(8px);
+      border: none;
+      outline: none;
+
+      background: #FF00001A;
+      box-shadow: 0 0 VW(40px) 0 #00000014;
+
+      cursor: pointer;
+    }
+
+    &-btn {
+      grid-column: 3/4;
+      height: VW(60px);
+    }
+  }
+
+  &__head {
+    font-weight: 700;
+    font-size: VW(28px);
+
+    margin: VW(50px) 0 VW(40px);
+
+    span {
+      color: #B700FF;
+    }
+  }
+
+  &__members{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: VW(30px);
+
+    &-member{
+      position: relative;
+      display: grid;
+      grid-template-columns: VW(70px) 1fr;
+      gap: VW(20px);
+
+
+      height: VW(110px);
+      padding: VW(20px);
+
+      border-radius: VW(20px);
+      background: #FFFFFF;
+
+      &-delete{
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: VW(40px);
+        height: VW(40px);
+        background: #FF00001A;
+        border-radius: VW(41px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        img{
+          width: VW(24px);
+          height: VW(24px);
+
+          user-select: none;
+        }
+      }
+
+      &-links{
+        position: absolute;
+        right: VW(20px);
+        bottom: VW(20px);
+
+        width: VW(120px);
+        height: VW(20px);
+
+        display: flex;
+        justify-content: space-between;
+        gap: VW(15px);
 
         img{
           width: 100%;
@@ -1666,8 +1825,25 @@ input[data-autocompleted] {
         }
       }
 
-      p{
-        color: #ACB6BF;
+      &-pic{
+        width: 100%;
+        height: 100%;
+
+        border-radius: VW(20px);
+        overflow: hidden;
+
+        pointer-events: none;
+
+        img{
+          width: 100%;
+          height: 100%;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+
+      &-name{
+        margin-top: VW(5px);
       }
     }
   }
@@ -1690,11 +1866,11 @@ input[data-autocompleted] {
     background: none;
   }
 
-  &_members{
+  &_members {
     width: VW(556px);
   }
 
-  &_change, &_pass, &_request, &_gratz, &_end{
+  &_change, &_pass, &_request, &_gratz, &_end {
     width: VW(440px);
   }
 
@@ -1732,21 +1908,21 @@ input[data-autocompleted] {
 
       margin-bottom: VW(50px);
 
-      &_no-margin{
+      &_no-margin {
         margin-bottom: 0;
       }
 
-      &_red{
+      &_red {
         color: #FF0000;
       }
     }
 
-    &-dropdown{
+    &-dropdown {
       width: 100%;
       height: VW(60px);
     }
 
-    &-members{
+    &-members {
       display: flex;
       align-items: center;
       justify-content: start;
@@ -1754,27 +1930,28 @@ input[data-autocompleted] {
 
       margin-top: VW(30px);
 
-      p{
+      p {
         color: #B700FF;
         font-size: VW(20px);
 
         margin-right: auto;
       }
 
-      div{
+      div {
         width: VW(21px);
         height: VW(26px);
 
         cursor: pointer;
         user-select: none;
 
-        img{
+        img {
           width: 100%;
-          height: 100%;}
+          height: 100%;
+        }
       }
     }
 
-    &-member{
+    &-member {
       display: grid;
       grid-template-columns: VW(70px) 1fr;
 
@@ -1784,7 +1961,7 @@ input[data-autocompleted] {
 
       margin-top: VW(20px);
 
-      &-pic{
+      &-pic {
         grid-row: span 2;
 
         width: 100%;
@@ -1793,7 +1970,7 @@ input[data-autocompleted] {
         border-radius: VW(20px);
         overflow: hidden;
 
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -1801,20 +1978,20 @@ input[data-autocompleted] {
         }
       }
 
-      p{
+      p {
         align-self: end;
       }
 
-      &-links{
+      &-links {
         display: flex;
         align-items: start;
         gap: VW(15px);
 
-        a{
+        a {
           width: VW(19px);
           height: VW(19px);
 
-          img{
+          img {
             width: 100%;
             height: 100%;
           }
@@ -1822,10 +1999,10 @@ input[data-autocompleted] {
       }
     }
 
-    &-text{
+    &-text {
     }
 
-    &-upload{
+    &-upload {
       display: grid;
       grid-template-columns: VW(60px) 1fr;
       gap: VW(6px) VW(30px);
@@ -1834,7 +2011,7 @@ input[data-autocompleted] {
 
       margin-top: VW(30px);
 
-      &-btn{
+      &-btn {
         grid-row: span 2;
 
         width: 100%;
@@ -1857,29 +2034,88 @@ input[data-autocompleted] {
         user-select: none;
       }
 
-      p{
+      p {
         align-self: end;
       }
 
-      span{
+      span {
         align-self: start;
         color: #ACB6BF;
       }
     }
 
-    &-btn{
+    &-btn {
       margin-top: VW(50px);
     }
 
-    &-input{
+    &-input {
     }
 
-    &-gap{
+    &-gap {
       display: grid;
 
-      &_30{
+      &_30 {
         gap: VW(30px);
       }
+    }
+  }
+}
+
+.notify {
+  position: fixed;
+  top: VW(60px);
+  right: 0;
+  width: VW(396px);
+  height: VW(110px);
+
+  display: flex;
+  align-items: center;
+  gap: VW(20px);
+  padding: VW(30px) VW(20px) VW(30px) VW(30px);
+
+  border-bottom-left-radius: VW(30px);
+
+  &_red {
+    background: #FFE6E6;
+
+    p {
+      color: #FF0000;
+    }
+  }
+
+  &_green {
+    background: #EEF7EE;
+
+    p {
+      color: #4CAF50;
+    }
+  }
+
+  &__box {
+    min-width: VW(50px);
+    min-height: VW(50px);
+    max-width: VW(50px);
+    max-height: VW(50px);
+    width: VW(50px);
+    height: VW(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: VW(10px);
+
+    &-cross {
+      width: VW(20px);
+      height: VW(20px);
+
+      user-select: none;
+    }
+
+    &-tick {
+      width: VW(20px);
+      height: VW(17px);
+
+      user-select: none;
     }
   }
 }

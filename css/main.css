@@ -705,6 +705,15 @@ input[data-autocompleted] {
   font-size: 0.8421052632vw;
   color: #ACB6BF;
 }
+.event__desc-invite {
+  display: flex;
+  height: 3.1578947368vw;
+  gap: 1.5789473684vw;
+}
+.event__desc-invite-input {
+  min-width: 38.4210526316vw;
+  width: 38.4210526316vw;
+}
 .event__host {
   display: grid;
 }
@@ -1263,6 +1272,132 @@ input[data-autocompleted] {
   color: #ACB6BF;
 }
 
+.team {
+  padding: 5.7894736842vw 10.5263157895vw;
+  display: grid;
+}
+.team__card {
+  display: grid;
+  grid-template-columns: 30.3684210526vw 1fr 16.8421052632vw;
+  column-gap: 2.1052631579vw;
+  padding: 2.1052631579vw;
+  background-color: #FFFFFF;
+  border-radius: 2.6315789474vw;
+}
+.team__card-pic {
+  grid-row: span 3;
+  width: 100%;
+  border-radius: 1.3157894737vw;
+  overflow: hidden;
+}
+.team__card-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.team__card-title {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.6842105263vw;
+  margin-bottom: 1.5789473684vw;
+}
+.team__card-text {
+  grid-column: span 2;
+  height: 8.3157894737vw;
+}
+.team__card-exit {
+  align-self: end;
+  justify-self: start;
+  font-size: 0.7368421053vw;
+  color: #FF0000;
+  width: 9.2105263158vw;
+  height: 1.7368421053vw;
+  border-radius: 0.4210526316vw;
+  border: none;
+  outline: none;
+  background: rgba(255, 0, 0, 0.1019607843);
+  box-shadow: 0 0 2.1052631579vw 0 rgba(0, 0, 0, 0.0784313725);
+  cursor: pointer;
+}
+.team__card-btn {
+  grid-column: 3/4;
+  height: 3.1578947368vw;
+}
+.team__head {
+  font-weight: 700;
+  font-size: 1.4736842105vw;
+  margin: 2.6315789474vw 0 2.1052631579vw;
+}
+.team__head span {
+  color: #B700FF;
+}
+.team__members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5789473684vw;
+}
+.team__members-member {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.6842105263vw 1fr;
+  gap: 1.0526315789vw;
+  height: 5.7894736842vw;
+  padding: 1.0526315789vw;
+  border-radius: 1.0526315789vw;
+  background: #FFFFFF;
+}
+.team__members-member-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.1052631579vw;
+  height: 2.1052631579vw;
+  background: rgba(255, 0, 0, 0.1019607843);
+  border-radius: 2.1578947368vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.team__members-member-delete img {
+  width: 1.2631578947vw;
+  height: 1.2631578947vw;
+  user-select: none;
+}
+.team__members-member-links {
+  position: absolute;
+  right: 1.0526315789vw;
+  bottom: 1.0526315789vw;
+  width: 6.3157894737vw;
+  height: 1.0526315789vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7894736842vw;
+}
+.team__members-member-links img {
+  width: 100%;
+  height: 100%;
+}
+.team__members-member-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.0526315789vw;
+  overflow: hidden;
+  pointer-events: none;
+}
+.team__members-member-pic img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.team__members-member-name {
+  margin-top: 0.2631578947vw;
+}
+
 .dialog {
   top: 50%;
   left: 50%;
@@ -1414,6 +1549,54 @@ input[data-autocompleted] {
 }
 .dialog__content-gap_30 {
   gap: 1.5789473684vw;
+}
+
+.notify {
+  position: fixed;
+  top: 3.1578947368vw;
+  right: 0;
+  width: 20.8421052632vw;
+  height: 5.7894736842vw;
+  display: flex;
+  align-items: center;
+  gap: 1.0526315789vw;
+  padding: 1.5789473684vw 1.0526315789vw 1.5789473684vw 1.5789473684vw;
+  border-bottom-left-radius: 1.5789473684vw;
+}
+.notify_red {
+  background: #FFE6E6;
+}
+.notify_red p {
+  color: #FF0000;
+}
+.notify_green {
+  background: #EEF7EE;
+}
+.notify_green p {
+  color: #4CAF50;
+}
+.notify__box {
+  min-width: 2.6315789474vw;
+  min-height: 2.6315789474vw;
+  max-width: 2.6315789474vw;
+  max-height: 2.6315789474vw;
+  width: 2.6315789474vw;
+  height: 2.6315789474vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: 0.5263157895vw;
+}
+.notify__box-cross {
+  width: 1.0526315789vw;
+  height: 1.0526315789vw;
+  user-select: none;
+}
+.notify__box-tick {
+  width: 1.0526315789vw;
+  height: 0.8947368421vw;
+  user-select: none;
 }
 
 .hide-on-desktop {
