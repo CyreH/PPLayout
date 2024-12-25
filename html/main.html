@@ -51,23 +51,72 @@
 
         <div class="main__filters-dropdown main__filters-dropdown_1 dropdown">
             <div class="dropdown-select">
-                <div class="dropdown-select-selected"><span>Даты:</span>&nbsp;<p class="dropdown-select-selected-text">в
-                    любое время</p></div>
+                <div class="dropdown-select-selected"><p class="dropdown-select-selected-text">Выберите диапазон дат</p></div>
                 <div class="dropdown-select-caret">
                     <img src="../media/caret.svg" alt="caret">
                 </div>
             </div>
             <div class="dropdown-menu">
-                <div class="dropdown-menu-wrapper">
-                    <div class="dropdown-menu-item">
-                        <p class="dropdown-menu-item-text">Онлайн</p>
-                    </div>
-                    <div class="dropdown-menu-item">
-                        <p class="dropdown-menu-item-text">Екатеринбург</p>
-                    </div>
-                    <div class="dropdown-menu-item">
-                        <p class="dropdown-menu-item-text">Москва</p>
-                    </div>
+                <div class="dropdown-menu-wrapper dropdown-menu-wrapper_dates">
+                    <button class="dropdown-menu-month">Декабрь 2024</button>
+                    <button class="dropdown-menu-arrow dropdown-menu-arrow_left"><img src="../media/arrow.svg" alt="back"></button>
+                    <button class="dropdown-menu-arrow"><img src="../media/arrow.svg" alt="next"></button>
+
+                    <p class="dropdown-menu-day dropdown-menu-day_bold">Пн</p>
+                    <p class="dropdown-menu-day dropdown-menu-day_bold">Вт</p>
+                    <p class="dropdown-menu-day dropdown-menu-day_bold">Ср</p>
+                    <p class="dropdown-menu-day dropdown-menu-day_bold">Чт</p>
+                    <p class="dropdown-menu-day dropdown-menu-day_bold">Пт</p>
+                    <p class="dropdown-menu-day dropdown-menu-day_bold dropdown-menu-day_pink">Сб</p>
+                    <p class="dropdown-menu-day dropdown-menu-day_bold dropdown-menu-day_pink">Вс</p>
+
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">26</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">27</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">28</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">29</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">30</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">31</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">1</button>
+
+                    <button class="dropdown-menu-day">2</button>
+                    <button class="dropdown-menu-day">3</button>
+                    <button class="dropdown-menu-day">4</button>
+                    <button class="dropdown-menu-day">5</button>
+                    <button class="dropdown-menu-day">6</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">7</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">8</button>
+
+                    <button class="dropdown-menu-day">9</button>
+                    <button class="dropdown-menu-day">10</button>
+                    <button class="dropdown-menu-day">11</button>
+                    <button class="dropdown-menu-day">12</button>
+                    <button class="dropdown-menu-day">13</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">14</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">15</button>
+
+                    <button class="dropdown-menu-day">16</button>
+                    <button class="dropdown-menu-day">17</button>
+                    <button class="dropdown-menu-day">18</button>
+                    <button class="dropdown-menu-day">19</button>
+                    <button class="dropdown-menu-day">20</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">21</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">22</button>
+
+                    <button class="dropdown-menu-day">23</button>
+                    <button class="dropdown-menu-day">24</button>
+                    <button class="dropdown-menu-day">25</button>
+                    <button class="dropdown-menu-day">26</button>
+                    <button class="dropdown-menu-day">27</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">28</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_pink">29</button>
+
+                    <button class="dropdown-menu-day">30</button>
+                    <button class="dropdown-menu-day">31</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">1</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">2</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">3</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">4</button>
+                    <button class="dropdown-menu-day dropdown-menu-day_gray">5</button>
                 </div>
             </div>
         </div>
@@ -247,7 +296,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
     <section class="main__events">
         <h3 class="main__events-head">Мои мероприятия</h3>
@@ -379,7 +427,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 </main>
 
@@ -417,9 +464,9 @@
             option.addEventListener('click', () => {
                 const optionText = option.querySelector('.dropdown-menu-item-text');
                 selected.textContent = optionText.textContent;
-                select.classList.remove('dropdown-select_active');
-                caret.classList.remove('dropdown-select-caret_rotate');
-                menu.classList.remove('dropdown-menu_open');
+                // select.classList.remove('dropdown-select_active');
+                // caret.classList.remove('dropdown-select-caret_rotate');
+                // menu.classList.remove('dropdown-menu_open');
             })
         });
 
