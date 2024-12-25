@@ -42,52 +42,48 @@
 
 <form class="create">
 
+    <div class="create__head">Создание<br> мероприятия</div>
+
     <div class="create__item">
         <div class="create__item-head create__item-head_active">
             <h1>Название мероприятия<span>*</span></h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content create__item-content_active">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Назовите ваше событие ярко и кратко, чтобы заинтересовать
-                    пользователей<br/>Максимум 120 символов</p>
+                <h3 class="create__item-content-head">Название мероприятия<span>*</span></h3>
+                <p class="create__item-content-text">Введите краткое и яркое название вашего мероприятия (до 120
+                    символов)</p>
                 <textarea class="create__item-content-input textarea" oninput="auto_grow(this)"
                           placeholder="Введите название"></textarea>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
             <h1>Баннер</h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Для привлечения внимания пользователей предлагаем загрузить баннер
-                    мероприятия<br/>Формат: .jpg, .png и .bmp, размер от 400 пикселей в ширину и высоту, вес до 2 MB</p>
+                <h3 class="create__item-content-head">Баннер</h3>
+                <p class="create__item-content-text">Для привлечения внимания загрузите баннер мероприятия (.jpg/.png/.bmp, от 400px, до 2MB)</p>
                 <div class="create__item-content-file">
                     <button class="create__item-content-file-upload">Выбрать файл</button>
                     <p>megatz.docs <span>3.2 Мб</span></p>
                     <button class="create__item-content-file-delete">Удалить</button>
                 </div>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
             <h1>Описание</h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Расскажите подробнее о мероприятии<br/>Рекомендуем 3-4 предложения,
-                    чтобы познакомить пользователей с предстоящим событием</p>
+                <h3 class="create__item-content-head">Описание</h3>
+                <p class="create__item-content-text">Расскажите о мероприятии (не менее 3-4 предложения)</p>
                 <textarea class="create__item-content-input textarea" oninput="auto_grow(this)"
                           placeholder="Введите описание"></textarea>
 
@@ -97,20 +93,18 @@
                     <p>megatz.docs <span>3.2 Мб</span></p>
                     <button class="create__item-content-file-delete">Удалить</button>
                 </div>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
             <h1>Адрес<span>*</span></h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Расскажите где будет проходить ваше мероприятие<br/>Рекомендуем
-                    указывать адрес подробно, чтобы участники смогу вас найти</p>
+                <h3 class="create__item-content-head">Адрес<span>*</span></h3>
+                <p class="create__item-content-text">Укажите подробный адрес проведения вашего мероприятия</p>
                 <div class="create__item-content-radios">
                     <input type="radio" class="visually-hidden" id="createAddressOnline" name="createAddress"
                            value="online" required>
@@ -128,29 +122,28 @@
                 <div id="createAddressOfflineInfo" class="create__item-content-hidden">
                     <div class="create__item-content-wrap">
                         <div class="create__item-content-inputs">
-                            <div class="input_white">
+                            <div class="input_white input_white_gray">
                                 <input class="input_white-field" type="text" placeholder="Введите город">
                             </div>
-                            <div class="input_white">
+                            <div class="input_white input_white_gray">
                                 <input class="input_white-field" type="text" placeholder="Введите улицу, дом">
                             </div>
                         </div>
                     </div>
                 </div>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
             <h1>Формат<span>*</span></h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
+                <h3 class="create__item-content-head">Формат<span>*</span></h3>
                 <p class="create__item-content-text">Укажите один из форматов вашего мероприятия</p>
-                <div class="create__item-content-dropdown dropdown">
+                <div class="create__item-content-dropdown dropdown dropdown_gray">
                     <div class="create__item-content-dropdown-select dropdown-select">
                         <div class="dropdown-select-selected"><span>Выберите формат</span></div>
                         <div class="dropdown-select-caret">
@@ -171,49 +164,61 @@
                         </div>
                     </div>
                 </div>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
             <h1>Дата и время<span>*</span></h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Укажите даты и время начала и окончания вашего мероприятия<br/>Если
-                    оно состоит из нескольких частей, то можно указать несколько временных отрезков</p>
+                <h3 class="create__item-content-head">Дата и время<span>*</span></h3>
+                <p class="create__item-content-text">Укажите даты и время проведения мероприятия. <br>
+                    Для многоэтапных событий можно добавить несколько временных интервалов с указанием максимума участников</p>
                 <div id="createDates" class="create__item-content-dates">
-                    <div id="createAdd" class="create__item-content-dates-date input_white">
-                        <input class="input_white-field input_white-field_date" type="text" placeholder="01.01.2024">
-                        <img src="../media/calendar.svg" alt="" class="input_white-calendar">
+                    <p class="create__item-content-dates-head">1 часть мероприятия</p>
+                    <button class="create__item-content-dates-remove hide">Удалить</button>
+
+                    <p class="create__item-content-dates-text">Начало:</p>
+                    <div class="create__item-content-dates-input input_white input_white_gray">
+                        <input class="input_white-field" type="date" placeholder="__.__.____">
                     </div>
-                    <span class="decoy"></span>
-                    <button id="createDelete" onclick="deleteLastItem(document.getElementById('createDates'))"
-                            class="create__item-content-dates-remove visually-hidden">Удалить
-                    </button>
+                    <p class="create__item-content-dates-text">Конец:</p>
+                    <div class="create__item-content-dates-input input_white input_white_gray">
+                        <input class="input_white-field" type="date" placeholder="__.__.____">
+                    </div>
+
+                    <input id="limitedMembersCheck1" type="checkbox" class="visually-hidden">
+                    <label for="limitedMembersCheck1" class="create__item-content-dates-check">
+                        <span>
+                            <img src="../media/checkbox.svg" alt="check">
+                        </span>
+                        Ограничение по количеству человек
+                    </label>
+
+                    <div class="create__item-content-dates-amount input_white input_white_gray">
+                        <input class="input_white-field" type="text" placeholder="Количество">
+                    </div>
 
                 </div>
-                <button onclick="duplicateItem(document.getElementById('createAdd')); duplicateItem(document.getElementById('createDelete'));"
+                <button onclick="duplicateItem(document.getElementById('createDates'));"
                         class="create__item-content-add">
                     Добавить дату и время
                 </button>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
             <h1>Стоимость входа<span>*</span></h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Если у вас платное мероприятие, то укажите стоимость входа для
-                    посетителей</p>
+                <h3 class="create__item-content-head">Стоимость входа<span>*</span></h3>
+                <p class="create__item-content-text">Укажите стоимость входа для посетителей, если мероприятие платное. Сервис не производит сбор средств</p>
                 <div class="create__item-content-radios">
                     <input type="radio" class="visually-hidden" id="createJoinFree" name="createJoin"
                            value="free" required>
@@ -230,26 +235,25 @@
                 </div>
                 <div id="createJoinPayInfo" class="create__item-content-hidden">
                     <div class="create__item-content-wrap">
-                        <div class="create__item-content-input_short input_white">
+                        <div class="create__item-content-input_short input_white input_white_gray">
                             <input class="input_white-field" type="text" placeholder="Введите стоимость">
                         </div>
                     </div>
                 </div>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
             <h1>Доступ к мероприятию<span>*</span></h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Выберите уровень доступа к мероприятию<br/>Если вы хотите его
-                    организовать только для определённого круга лиц, то укажите “Закрытое мероприятие”.<br/>В ином
-                    случае - “Открыто для всех”</p>
+                <h3 class="create__item-content-head">Доступ к мероприятию<span>*</span></h3>
+                <p class="create__item-content-text">Выберите доступ: <br>
+                    &bull; Открытое - для всех желающих <br>
+                    &bull; Закрытое - только для приглашённых вами участников</p>
                 <div class="create__item-content-radios">
                     <input type="radio" class="visually-hidden" id="createAccessOpen" name="createAccess"
                            value="open" required>
@@ -264,53 +268,42 @@
                         Закрытое мероприятие
                     </label>
                 </div>
+                <button class="create__item-content-btn btn_black">Далее</button>
             </div>
         </div>
     </div>
     <div class="create__item">
         <div class="create__item-head">
-            <h1>Количество участников<span>*</span></h1>
-            <div class="create__item-head-pic">
-                <img src="../media/caret.svg" alt="caret">
-            </div>
+            <h1>Дополнительные поля</h1>
         </div>
         <div class="create__item-content">
             <div class="create__item-content-wrap">
-                <p class="create__item-content-text">Если вы не можете вместить большее количество людей, чем подразумевает площадка,
-                    <br/>то поставьте ограничение на участников</p>
-                <div class="create__item-content-radios">
-                    <input type="radio" class="visually-hidden" id="createMembersUnlimited" name="createMembers"
-                           value="unlimited" required>
-                    <label for="createMembersUnlimited" class="create__item-content-radios-btn">
-                        <span></span>
-                        Неограниченно
-                    </label>
-                    <input type="radio" class="visually-hidden" id="createMembersLimited" name="createMembers"
-                           value=limited" required>
-                    <label for="createMembersLimited" class="create__item-content-radios-btn">
-                        <span></span>
-                        Ограниченно
-                    </label>
-                </div>
-                <div id="createMembersLimitedAmount" class="create__item-content-hidden">
-                    <div class="create__item-content-wrap">
-                        <div class="create__item-content-inputs">
-                            <div class="input_white">
-                                <input class="input_white-field" type="text" placeholder="Введите количество">
-                            </div>
-                            <p>19.10.23 18:00 – 19.10.23 18:00</p>
-                        </div>
+                <p class="create__item-content-text">Добавьте свои поля для сбора дополнительной информации от участников</p>
+                <div id="createField" class="create__item-content-info">
+                    <div id="createFieldAdd" class="create__item-content-info-date input_white input_white_gray">
+                        <input class="input_white-field input_white-field_date" type="text" placeholder="01.01.2024">
+                        <img src="../media/calendar.svg" alt="" class="input_white-calendar">
                     </div>
+                    <span class="decoy"></span>
+                    <button id="createFieldDelete" onclick="deleteLastItem(document.getElementById('createField'))"
+                            class="create__item-content-info-remove visually-hidden">Удалить
+                    </button>
                 </div>
+
+                <button onclick="duplicateItem(document.getElementById('createFieldAdd')); duplicateItem(document.getElementById('createFieldDelete'));"
+                        class="create__item-content-add">
+                    Добавить дату и время
+                </button>
+                <button type="submit" class="create__item-content-confirm btn_black">Создать мероприятие</button>
             </div>
         </div>
     </div>
 
 
-    <div class="save save_hide">
-        <p>Проверьте, что все обязательные поля заполнены</p>
-        <button type="submit" class="save__btn btn_black">Создать мероприятие</button>
-    </div>
+<!--    <div class="save save_hide">-->
+<!--        <p>Проверьте, что все обязательные поля заполнены</p>-->
+<!--        <button type="submit" class="save__btn btn_black">Создать мероприятие</button>-->
+<!--    </div>-->
 </form>
 
 <script>
@@ -367,12 +360,12 @@
         createPayInfo.classList.add("create__item-content-hidden_show");
     })
 
-    createUnlimited.addEventListener("change", () => {
-        createLimitedInfo.classList.remove("create__item-content-hidden_show");
-    })
-    createLimited.addEventListener("change", () => {
-        createLimitedInfo.classList.add("create__item-content-hidden_show");
-    })
+    // createUnlimited.addEventListener("change", () => {
+    //     createLimitedInfo.classList.remove("create__item-content-hidden_show");
+    // })
+    // createLimited.addEventListener("change", () => {
+    //     createLimitedInfo.classList.add("create__item-content-hidden_show");
+    // })
     // end
 
 
@@ -401,6 +394,19 @@
 
         });
     });
+
+    const nextBtns = document.querySelectorAll('.create__item-content-btn');
+
+    for (let i = 0; i < nextBtns.length; i++) {
+        nextBtns[i].addEventListener("click", () => {
+            accordionHeads[i].classList.add("create__item-head_passed");
+            accordionHeads[i].classList.remove("create__item-head_active");
+            accordionHeads[i].nextElementSibling.classList.remove("create__item-content_active");
+
+            accordionHeads[i+1].classList.add("create__item-head_active");
+            accordionHeads[i+1].nextElementSibling.classList.add("create__item-content_active");
+        })
+    }
     // end of accordion
 
 
