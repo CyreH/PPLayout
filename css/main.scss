@@ -2099,6 +2099,10 @@ input[data-autocompleted] {
       }
     }
 
+    &-sub_title{
+      margin: VW(30px) 0 VW(20px);
+    }
+
     &-dropdown {
       width: 100%;
       height: VW(60px);
@@ -2137,7 +2141,7 @@ input[data-autocompleted] {
       display: grid;
       grid-template-columns: VW(70px) 1fr;
 
-      height: VW(70px);
+      //height: VW(70px);
 
       gap: VW(7px) VW(20px);
 
@@ -2177,6 +2181,17 @@ input[data-autocompleted] {
             width: 100%;
             height: 100%;
           }
+        }
+      }
+
+      &-info{
+        margin: VW(7px) 0 VW(10px);
+        grid-column: span 2;
+        display: grid;
+        gap: VW(10px);
+
+        &-text{
+          color: #ACB6BF;
         }
       }
     }

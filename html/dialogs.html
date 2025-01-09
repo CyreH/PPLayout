@@ -17,6 +17,7 @@
     <button id="dialogBtn4" class="btn_black">Подача заявки</button>
     <button id="dialogBtn5" class="btn_black">Благодарим за запись</button>
     <button id="dialogBtn6" class="btn_black">Завершение мероприятия</button>
+    <button id="dialogBtn7" class="btn_black">Список участников новый</button>
 </main>
 
 <dialog class="dialog dialog_members">
@@ -176,8 +177,7 @@
 
         <h2 class="dialog__content-title">Подача заявки</h2>
 
-        <div class="dialog__content-gap dialog__content-gap_30">
-            <div class="dialog__content-dropdown dropdown">
+        <div class="dialog__content-dropdown dropdown">
                 <div class="dropdown-select">
                     <div class="dropdown-select-selected"><span>Даты:</span>&nbsp;<p class="dropdown-select-selected-text">в
                         любое время</p></div>
@@ -198,11 +198,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="dialog__content-input input_white">
-                <input class="input_white-field input_white-field_pass" type="text" placeholder="Название доп поля">
-            </div>
         </div>
+
+        <p class="dialog__content-sub_title">Номер телефона</p>
+
+        <div class="dialog__content-input input_white">
+            <input class="input_white-field input_white-field_pass" type="tel" placeholder="Введите номер телефона">
+        </div>
+
         <button formmethod="dialog" type="submit" class="dialog__content-btn btn_black">Записаться</button>
     </form>
 </dialog>
@@ -226,6 +229,103 @@
         <h2 class="dialog__content-title dialog__content-title_red dialog__content-title_no-margin">Завершение мероприятия</h2>
 
         <button formmethod="dialog" type="submit" class="dialog__content-btn btn_black">Подтвердить</button>
+    </form>
+</dialog>
+
+<dialog class="dialog dialog_members">
+    <form method="dialog" class="dialog__content">
+        <button class="dialog__content-close" formnovalidate>
+            <img src="../media/closeCross.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="dialog__content-title">Список участников</h2>
+
+        <div class="dialog__content-dropdown dropdown">
+            <div class="dropdown-select">
+                <div class="dropdown-select-selected"><span>Даты:</span>&nbsp;<p class="dropdown-select-selected-text">в
+                    любое время</p></div>
+                <div class="dropdown-select-caret">
+                    <img src="../media/caret.svg" alt="caret">
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-menu-wrapper">
+                    <div class="dropdown-menu-item">
+                        <p class="dropdown-menu-item-text">Онлайн</p>
+                    </div>
+                    <div class="dropdown-menu-item">
+                        <p class="dropdown-menu-item-text">Екатеринбург</p>
+                    </div>
+                    <div class="dropdown-menu-item">
+                        <p class="dropdown-menu-item-text">Москва</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog__content-members">
+            <p>Участники 323/500:</p>
+            <div>
+                <img src="../media/pdf.svg" alt="pdf">
+            </div>
+            <div>
+                <img src="../media/xls.svg" alt="xls">
+            </div>
+        </div>
+
+        <div class="dialog__content-member">
+            <div class="dialog__content-member-pic">
+                <img src="../media/defaultAvatar.png" alt="defaultAvatar">
+            </div>
+            <p>Богданов Богдан Богданович</p>
+
+            <div class="dialog__content-member-links">
+                <a href="">
+                    <img src="../media/socials/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="">
+                    <img src="../media/socials/vk.svg" alt="vk">
+                </a>
+                <a href="">
+                    <img src="../media/socials/tg.svg" alt="tg">
+                </a>
+                <a href="">
+                    <img src="../media/socials/mail.svg" alt="mail">
+                </a>
+            </div>
+
+            <div class="dialog__content-member-info">
+                <p class="dialog__content-member-info-text">Номер телефона: <span>+79212621449</span></p>
+                <p class="dialog__content-member-info-text">Серия и номер паспорта: <span>6600 123321</span></p>
+            </div>
+        </div>
+
+        <div class="dialog__content-member">
+            <div class="dialog__content-member-pic">
+                <img src="../media/defaultAvatar.png" alt="defaultAvatar">
+            </div>
+            <p>Богданов Богдан Богданович</p>
+
+            <div class="dialog__content-member-links">
+                <a href="">
+                    <img src="../media/socials/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="">
+                    <img src="../media/socials/vk.svg" alt="vk">
+                </a>
+                <a href="">
+                    <img src="../media/socials/tg.svg" alt="tg">
+                </a>
+                <a href="">
+                    <img src="../media/socials/mail.svg" alt="mail">
+                </a>
+            </div>
+
+            <div class="dialog__content-member-info">
+                <p class="dialog__content-member-info-text">Номер телефона: <span>+79212621449</span></p>
+                <p class="dialog__content-member-info-text">Серия и номер паспорта: <span>6600 123321</span></p>
+            </div>
+        </div>
     </form>
 </dialog>
 
