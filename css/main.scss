@@ -484,6 +484,12 @@ input[data-autocompleted] {
   }
 }
 
+.flex{
+  display: flex;
+  align-items: center;
+  gap: VW(15px);
+}
+
 .save {
   position: fixed;
   left: VW(200px);
@@ -2106,6 +2112,10 @@ input[data-autocompleted] {
     &-dropdown {
       width: 100%;
       height: VW(60px);
+
+      &_short{
+        width: VW(163px);
+      }
     }
 
     &-members {
@@ -2253,6 +2263,38 @@ input[data-autocompleted] {
 
       &_30 {
         gap: VW(30px);
+      }
+    }
+
+    &-checkbox {
+      display: block;
+      content: "&#x2713";
+      width: VW(18px);
+      height: VW(18px);
+
+      max-height: VW(18px);
+      max-width: VW(18px);
+
+      border: #ACB6BF VW(2px) solid;
+      border-radius: VW(6px);
+
+      overflow: hidden;
+
+      cursor: pointer;
+      user-select: none;
+
+      img {
+        display: none;
+      }
+    }
+
+    input:checked + label {
+      border: none;
+
+      img {
+        display: block;
+        width: VW(18px);
+        height: VW(18px);
       }
     }
   }

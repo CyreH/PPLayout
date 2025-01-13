@@ -206,6 +206,39 @@
             <input class="input_white-field input_white-field_pass" type="tel" placeholder="Введите номер телефона">
         </div>
 
+        <p class="dialog__content-sub_title">Автоудаление данных</p>
+        <div class="flex">
+            <input id="requestCheckbox1" type="checkbox" class="visually-hidden">
+            <label for="requestCheckbox1" class="dialog__content-checkbox">
+                <img src="../media/checkbox.svg" alt="&#x2705;">
+            </label>
+            <p class="dialog__content-text">Через</p>
+            <div class="dialog__content-dropdown dialog__content-dropdown_short dropdown">
+                <div class="dropdown-select">
+                    <div class="dropdown-select-selected"><span>дней</span></div>
+                    <div class="dropdown-select-caret">
+                        <img src="../media/caret.svg" alt="caret">
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="dropdown-menu-wrapper">
+                        <div class="dropdown-menu-item">
+                            <p class="dropdown-menu-item-text">15 дней</p>
+                        </div>
+                        <div class="dropdown-menu-item">
+                            <p class="dropdown-menu-item-text">30 дней</p>
+                        </div>
+                        <div class="dropdown-menu-item">
+                            <p class="dropdown-menu-item-text">60 дней</p>
+                        </div>
+                        <div class="dropdown-menu-item">
+                            <p class="dropdown-menu-item-text">90 дней</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <button formmethod="dialog" type="submit" class="dialog__content-btn btn_black">Записаться</button>
     </form>
 </dialog>

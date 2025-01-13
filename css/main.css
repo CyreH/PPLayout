@@ -352,6 +352,12 @@ input[data-autocompleted] {
   background: #F0F5FA;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.7894736842vw;
+}
+
 .save {
   position: fixed;
   left: 10.5263157895vw;
@@ -1590,6 +1596,9 @@ input[data-autocompleted] {
   width: 100%;
   height: 3.1578947368vw;
 }
+.dialog__content-dropdown_short {
+  width: 8.5789473684vw;
+}
 .dialog__content-members {
   display: flex;
   align-items: center;
@@ -1694,6 +1703,30 @@ input[data-autocompleted] {
 }
 .dialog__content-gap_30 {
   gap: 1.5789473684vw;
+}
+.dialog__content-checkbox {
+  display: block;
+  content: "&#x2713";
+  width: 0.9473684211vw;
+  height: 0.9473684211vw;
+  max-height: 0.9473684211vw;
+  max-width: 0.9473684211vw;
+  border: #ACB6BF 0.1052631579vw solid;
+  border-radius: 0.3157894737vw;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+.dialog__content-checkbox img {
+  display: none;
+}
+.dialog__content input:checked + label {
+  border: none;
+}
+.dialog__content input:checked + label img {
+  display: block;
+  width: 0.9473684211vw;
+  height: 0.9473684211vw;
 }
 
 .notify {
